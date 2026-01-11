@@ -75,19 +75,19 @@
         }
 
         header {
-            padding: 4rem 2rem 2rem;
+            padding: 5rem 2rem 3rem;
             text-align: center;
             position: relative;
             z-index: 10;
-            background: var(--bg-secondary);
-            border-bottom: 1px solid var(--border);
+            background: #1a1a1a;
+            border-bottom: none;
         }
 
         h1 {
             font-family: var(--font-serif);
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 600;
-            color: var(--text-primary);
+            color: #ffffff;
             letter-spacing: -0.03em;
             margin-bottom: 0.5rem;
             animation: fadeUp var(--duration-slow) var(--ease-out);
@@ -106,7 +106,7 @@
 
         .subtitle {
             font-size: 1.1rem;
-            color: var(--text-secondary);
+            color: rgba(255,255,255,0.7);
             font-weight: 400;
             opacity: 0;
             animation: fadeUp var(--duration-slow) var(--ease-out) 0.1s forwards;
@@ -114,14 +114,14 @@
 
         .search-container {
             max-width: 600px;
-            margin: 2rem auto;
+            margin: 2.5rem auto 0;
             padding: 0 2rem;
             position: relative;
             z-index: 10;
             opacity: 0;
             animation: fadeUp var(--duration-slow) var(--ease-out) 0.2s forwards;
         }
-        
+
         .search-box {
             position: relative;
         }
@@ -130,23 +130,24 @@
             width: 100%;
             padding: 1rem 3rem 1rem 1.5rem;
             font-size: 1rem;
-            border: 1px solid var(--border);
+            border: 1px solid rgba(255,255,255,0.15);
             border-radius: 999px;
-            background: var(--bg-secondary);
-            color: var(--text-primary);
+            background: rgba(255,255,255,0.1);
+            color: #ffffff;
             font-family: var(--font-sans);
-            box-shadow: var(--shadow-sm);
+            backdrop-filter: blur(10px);
             transition: all var(--duration-fast) var(--ease-out);
         }
 
         .search-input::placeholder {
-            color: var(--text-tertiary);
+            color: rgba(255,255,255,0.5);
         }
 
         .search-input:focus {
             outline: none;
             border-color: var(--accent);
-            box-shadow: 0 0 0 4px var(--accent-light);
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 0 0 4px rgba(0, 175, 216, 0.2);
         }
 
         .search-icon {
@@ -154,7 +155,7 @@
             right: 1.25rem;
             top: 50%;
             transform: translateY(-50%);
-            color: var(--text-tertiary);
+            color: rgba(255,255,255,0.5);
             font-size: 1.1rem;
         }
 
