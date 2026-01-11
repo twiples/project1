@@ -390,7 +390,241 @@
             font-size: 0.8rem;
             margin-top: 1rem;
         }
-        
+
+        /* ===== NEW: Quick Summary Card Enhancements ===== */
+
+        .measure-summary {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--light-blue);
+            margin: 1rem 0;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid var(--warm-gold);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .quick-facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .fact-item {
+            text-align: center;
+            padding: 0.5rem;
+        }
+
+        .fact-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .fact-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--slate-gray);
+            margin-bottom: 0.3rem;
+        }
+
+        .fact-value {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--soft-cream);
+            line-height: 1.3;
+        }
+
+        /* Who's Behind It Badge */
+        .initiator-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 0.8rem 0;
+            font-weight: 500;
+        }
+
+        .initiator-government {
+            background: rgba(33, 150, 243, 0.2);
+            border: 1px solid rgba(33, 150, 243, 0.4);
+            color: #64b5f6;
+        }
+        .initiator-industry {
+            background: rgba(255, 152, 0, 0.2);
+            border: 1px solid rgba(255, 152, 0, 0.4);
+            color: #ffb74d;
+        }
+        .initiator-grassroots {
+            background: rgba(76, 175, 80, 0.2);
+            border: 1px solid rgba(76, 175, 80, 0.4);
+            color: #81c784;
+        }
+        .initiator-political {
+            background: rgba(156, 39, 176, 0.2);
+            border: 1px solid rgba(156, 39, 176, 0.4);
+            color: #ba68c8;
+        }
+        .initiator-labor {
+            background: rgba(244, 67, 54, 0.2);
+            border: 1px solid rgba(244, 67, 54, 0.4);
+            color: #e57373;
+        }
+        .initiator-nonprofit {
+            background: rgba(0, 150, 136, 0.2);
+            border: 1px solid rgba(0, 150, 136, 0.4);
+            color: #4db6ac;
+        }
+
+        /* Endorsements Map */
+        .endorsements-section {
+            margin: 1.5rem 0;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .endorsements-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--warm-gold);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .endorsements-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .endorsement-column h4 {
+            font-size: 0.85rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .endorsement-column.support h4 { color: #81c784; }
+        .endorsement-column.oppose h4 { color: #e57373; }
+
+        .endorsement-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .endorsement-chip {
+            display: inline-block;
+            padding: 0.35rem 0.7rem;
+            border-radius: 15px;
+            font-size: 0.72rem;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--soft-cream);
+            cursor: default;
+        }
+
+        .endorsement-chip.support {
+            border-left: 3px solid #81c784;
+            background: rgba(76, 175, 80, 0.1);
+        }
+        .endorsement-chip.oppose {
+            border-left: 3px solid #e57373;
+            background: rgba(244, 67, 54, 0.1);
+        }
+
+        .no-endorsements {
+            font-size: 0.8rem;
+            color: var(--slate-gray);
+            font-style: italic;
+        }
+
+        /* Expandable Details */
+        .expand-details-btn {
+            background: transparent;
+            border: 1px solid var(--warm-gold);
+            color: var(--warm-gold);
+            padding: 0.6rem 1.5rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .expand-details-btn:hover {
+            background: var(--warm-gold);
+            color: var(--deep-navy);
+        }
+
+        .measure-details {
+            display: none;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .measure-details.expanded {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .detail-section {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1.2rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--warm-gold);
+        }
+
+        .detail-section h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--warm-gold);
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+        }
+
+        .detail-section p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--light-blue);
+            margin: 0;
+        }
+
+        .impact-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .impact-tag {
+            padding: 0.35rem 0.8rem;
+            background: rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            font-size: 0.75rem;
+            color: var(--warm-gold);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        /* ===== END Quick Summary Card Enhancements ===== */
+
         .close-btn {
             background: rgba(139, 21, 56, 0.8);
             color: white;
@@ -436,6 +670,35 @@
 
             #us-map {
                 height: 400px;
+            }
+
+            /* Mobile: Quick Facts & Endorsements */
+            .quick-facts {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.8rem;
+                padding: 1rem;
+            }
+
+            .fact-icon {
+                font-size: 1.2rem;
+            }
+
+            .fact-value {
+                font-size: 0.75rem;
+            }
+
+            .endorsements-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .initiator-badge {
+                font-size: 0.75rem;
+                padding: 0.4rem 0.8rem;
             }
         }
 
@@ -587,15 +850,15 @@
                 <span class="stat-label">States</span>
             </div>
             <div class="stat">
-                <span class="stat-number">56</span>
+                <span class="stat-number">130</span>
                 <span class="stat-label">Total Measures</span>
             </div>
             <div class="stat">
-                <span class="stat-number">48</span>
+                <span class="stat-number">112</span>
                 <span class="stat-label">Approved</span>
             </div>
             <div class="stat">
-                <span class="stat-number">8</span>
+                <span class="stat-number">18</span>
                 <span class="stat-label">Rejected</span>
             </div>
         </div>
@@ -840,9 +1103,9 @@
             },
             california: {
                 name: "California",
-                total: 16,
-                approved: 12,
-                rejected: 4,
+                total: 90,
+                approved: 76,
+                rejected: 14,
                 measures: [
                     {
                         id: "Proposition 50",
@@ -859,7 +1122,39 @@
                         title: "Sales Tax for Health Care",
                         jurisdiction: "Santa Clara County",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 57%",
+                        // NEW: Quick Summary Fields
+                        summary: "Increases county sales tax by 0.625% for 5 years to fund healthcare services and prevent hospital closures due to federal Medicaid cuts.",
+                        cost: "$330M/year",
+                        funding: "0.625% sales tax",
+                        impactOnYou: "~$62/year average",
+                        // NEW: Problem & Context
+                        problem: "Federal cuts to Medicaid and SNAP programs threaten to close county hospitals and reduce healthcare access for 1.9 million residents.",
+                        currentSituation: "Santa Clara County operates 4 public hospitals (Valley Medical Center, O'Connor, Regional Medical Center, St. Louise) that serve the uninsured and low-income residents. Without new revenue, at least one hospital would likely close.",
+                        whoIsImpacted: ["All county residents", "Uninsured patients", "Low-income families", "Medi-Cal recipients", "Hospital workers"],
+                        benefits: "Healthcare access, Hospital operations, Safety net services",
+                        isNewOrUpdate: "New 5-year temporary tax",
+                        // NEW: Who's Behind It
+                        initiatedBy: {
+                            name: "Santa Clara County Board of Supervisors",
+                            type: "Government",
+                            motivation: "Prevent hospital closures and maintain healthcare access following federal funding cuts"
+                        },
+                        // NEW: Endorsements
+                        endorsements: {
+                            support: [
+                                { name: "SEIU Local 521", type: "Labor Union" },
+                                { name: "Santa Clara County Medical Association", type: "Professional Org" },
+                                { name: "League of Women Voters", type: "Nonprofit" },
+                                { name: "Mercury News Editorial Board", type: "Media" },
+                                { name: "Silicon Valley Leadership Group", type: "Business" }
+                            ],
+                            oppose: [
+                                { name: "Silicon Valley Taxpayers Association", type: "Taxpayer Group" },
+                                { name: "Howard Jarvis Taxpayers Association", type: "Taxpayer Group" },
+                                { name: "Santa Clara County Republican Party", type: "Political Party" }
+                            ]
+                        },
                         pros: "0.625% sales tax increase for 5 years; Raises $330M annually; Offsets federal Medicaid cuts; Keeps county hospitals open; Backfills deep federal cuts to social safety net",
                         cons: "General tax with no guarantee for healthcare; Regressive taxation hitting low-income hardest; Blank check with no oversight; County should operate fewer hospitals",
                         source: "KQED, Mercury News, SPUR"
@@ -879,10 +1174,42 @@
                         title: "Housing and Homelessness Parcel Tax",
                         jurisdiction: "Santa Cruz County",
                         result: "approved",
-                        resultText: "Approved",
-                        pros: "$96 annual parcel tax plus graduated real estate transfer tax; Funds housing and homelessness reduction; Addresses critical need",
-                        cons: "High tax burden; Real estate transfer tax could slow housing market; May not solve root causes",
-                        source: "Ballotpedia"
+                        resultText: "Approved 53%",
+                        // NEW: Quick Summary Fields
+                        summary: "Creates a $96 annual parcel tax plus graduated real estate transfer tax to fund affordable housing and homelessness services.",
+                        cost: "Varies by measure",
+                        funding: "$96/parcel + transfer tax",
+                        impactOnYou: "$96/year parcel owners",
+                        // NEW: Problem & Context
+                        problem: "Santa Cruz County faces a severe housing affordability crisis with rising homelessness. The median home price exceeds $1.1 million, and approximately 2,000 people experience homelessness on any given night.",
+                        currentSituation: "Current funding for homeless services and affordable housing is insufficient. The county relies on limited federal grants and general fund allocations that have not kept pace with growing needs.",
+                        whoIsImpacted: ["Homeless residents", "Low-income renters", "Property owners", "Housing developers", "Social service providers"],
+                        benefits: "Housing, Homelessness services, Community stability",
+                        isNewOrUpdate: "New initiative backed by housing advocates",
+                        // NEW: Who's Behind It
+                        initiatedBy: {
+                            name: "Housing Santa Cruz County Coalition",
+                            type: "Nonprofit",
+                            motivation: "Address housing crisis through dedicated funding for affordable housing construction and homelessness services"
+                        },
+                        // NEW: Endorsements
+                        endorsements: {
+                            support: [
+                                { name: "Housing Santa Cruz County", type: "Nonprofit" },
+                                { name: "Santa Cruz Community Health Centers", type: "Healthcare" },
+                                { name: "Santa Cruz Sentinel Editorial Board", type: "Media" },
+                                { name: "Local homeless service providers", type: "Nonprofit" },
+                                { name: "Santa Cruz County Democratic Party", type: "Political Party" }
+                            ],
+                            oppose: [
+                                { name: "Santa Cruz County Association of Realtors", type: "Industry" },
+                                { name: "Building Industry Association", type: "Industry" },
+                                { name: "Santa Cruz County Taxpayers Association", type: "Taxpayer Group" }
+                            ]
+                        },
+                        pros: "$96 annual parcel tax plus graduated real estate transfer tax; Funds housing and homelessness reduction; Addresses critical need; Backed by housing advocates and service providers",
+                        cons: "High tax burden; Real estate transfer tax could slow housing market; May not solve root causes; Opposed by real estate industry",
+                        source: "Ballotpedia, Santa Cruz Local, Lookout Santa Cruz"
                     },
                     {
                         id: "Measure B (Delano - Kern County)",
@@ -1003,6 +1330,846 @@
                         pros: "1% sales tax increase for city services; Combined rate 8.25%; Funds infrastructure",
                         cons: "Tax burden; City should reduce spending; Economic impact on businesses",
                         source: "Ballotpedia"
+                    },
+                    // ===== SAN FRANCISCO COUNTY MEASURES =====
+                    {
+                        id: "Proposition A (San Francisco)",
+                        title: "SFUSD School Bond ($790 Million)",
+                        jurisdiction: "San Francisco",
+                        result: "approved",
+                        resultText: "Approved 74%",
+                        // NEW: Quick Summary Fields
+                        summary: "Authorizes $790 million in bonds to repair, upgrade, and modernize San Francisco public school facilities.",
+                        cost: "$790 million",
+                        funding: "Property tax bonds",
+                        impactOnYou: "$12.95/$100K assessed value",
+                        // NEW: Problem & Context
+                        problem: "Many SFUSD schools are aging, lack modern technology, and need seismic retrofitting and accessibility upgrades.",
+                        currentSituation: "SFUSD operates 131 schools serving 49,000 students. Many buildings are 50+ years old with outdated HVAC, electrical systems, and technology infrastructure.",
+                        whoIsImpacted: ["SFUSD students", "Teachers and staff", "Property owners", "Parents and families"],
+                        benefits: "Schools, Student safety, Educational quality",
+                        isNewOrUpdate: "New bond measure",
+                        // NEW: Who's Behind It
+                        initiatedBy: {
+                            name: "San Francisco Board of Education",
+                            type: "Government",
+                            motivation: "Address critical deferred maintenance and modernize aging school facilities"
+                        },
+                        // NEW: Endorsements
+                        endorsements: {
+                            support: [
+                                { name: "San Francisco Democratic Party", type: "Political Party" },
+                                { name: "United Educators of SF (UESF)", type: "Labor Union" },
+                                { name: "SF Chronicle Editorial Board", type: "Media" },
+                                { name: "SF Parent Coalition", type: "Nonprofit" },
+                                { name: "SPUR", type: "Nonprofit" }
+                            ],
+                            oppose: [
+                                { name: "SF Republican Party", type: "Political Party" },
+                                { name: "SF Taxpayers Association", type: "Taxpayer Group" }
+                            ]
+                        },
+                        pros: "$790 million for school facilities improvements; Repairs aging buildings; Modernizes classrooms; Updates technology infrastructure; Needed 55% supermajority",
+                        cons: "Estimated $12.95 per $100,000 assessed value property tax; Large debt obligation; Questions about district management",
+                        source: "SF Elections, Ballotpedia"
+                    },
+                    {
+                        id: "Proposition B (San Francisco)",
+                        title: "Community Health and Medical Facilities Bond ($390 Million)",
+                        jurisdiction: "San Francisco",
+                        result: "approved",
+                        resultText: "Approved 72%",
+                        pros: "$390 million for shelters, healthcare facilities, and street safety; Addresses homelessness infrastructure; Improves public health facilities; Needed 66.6% supermajority",
+                        cons: "Estimated $6.90 per $100,000 assessed value property tax; Large debt commitment; Concerns about spending oversight",
+                        source: "SF Elections, Ballotpedia"
+                    },
+                    {
+                        id: "Proposition C (San Francisco)",
+                        title: "Inspector General",
+                        jurisdiction: "San Francisco",
+                        result: "approved",
+                        resultText: "Approved 60%",
+                        pros: "Creates Inspector General in Controller's Office; Investigates fraud, waste, and abuse; Increases government accountability; Independent oversight",
+                        cons: "Duplicates existing oversight functions; Additional bureaucracy; May create conflicts with other agencies",
+                        source: "SF Elections, Ballotpedia"
+                    },
+                    {
+                        id: "Proposition D (San Francisco)",
+                        title: "City Commissions and Mayoral Authority",
+                        jurisdiction: "San Francisco",
+                        result: "rejected",
+                        resultText: "Rejected 43%",
+                        pros: "Would limit commissions to 65; Grant mayor appointment authority over department heads; Streamline city governance; Reduce bureaucracy",
+                        cons: "Concentrated too much power in mayor; Most expensive measure at $8.7M raised; Reduced checks and balances; Undermined community input",
+                        source: "SF Elections, Ballotpedia"
+                    },
+                    {
+                        id: "Proposition E (San Francisco)",
+                        title: "Commissions Task Force",
+                        jurisdiction: "San Francisco",
+                        result: "approved",
+                        resultText: "Approved 52%",
+                        pros: "Creates five-member task force to review city commissions; More measured approach than Prop D; Allows public input before changes",
+                        cons: "Does not immediately address commission bloat; May delay needed reforms; Competing measure with Prop D",
+                        source: "SF Elections, Ballotpedia"
+                    },
+                    {
+                        id: "Proposition F (San Francisco)",
+                        title: "Police Staffing and Deferred Retirement",
+                        jurisdiction: "San Francisco",
+                        result: "rejected",
+                        resultText: "Rejected 45%",
+                        pros: "Extended Police Chief staffing reports to every three years; Created five-year deferred retirement program; Aimed to retain experienced officers",
+                        cons: "Weakened police oversight; Reduced reporting frequency; Deferred retirement too costly; Failed to address recruitment",
+                        source: "SF Elections, Ballotpedia"
+                    },
+                    {
+                        id: "Proposition G (San Francisco)",
+                        title: "Rental Subsidies for Low-Income Residents",
+                        jurisdiction: "San Francisco",
+                        result: "approved",
+                        resultText: "Approved 58%",
+                        pros: "$8.25 million annually for rental assistance; Helps extremely low-income seniors, families, and disabled; Addresses housing affordability crisis",
+                        cons: "Ongoing budget commitment; Does not increase housing supply; Band-aid solution to structural problem",
+                        source: "SF Elections, Ballotpedia"
+                    },
+                    {
+                        id: "Proposition H (San Francisco)",
+                        title: "Firefighter Retirement Benefits",
+                        jurisdiction: "San Francisco",
+                        result: "approved",
+                        resultText: "Approved 52%",
+                        pros: "Lowers age for maximum pension benefits from 58 to 55 for Fire Department; Improves recruitment and retention; Recognizes physical demands of job",
+                        cons: "Increases pension costs; Creates inequity with other city workers; Actuarial concerns about funding",
+                        source: "SF Elections, Ballotpedia"
+                    },
+                    {
+                        id: "Proposition I (San Francisco)",
+                        title: "Nurses and 911 Operators Retirement Benefits",
+                        jurisdiction: "San Francisco",
+                        result: "approved",
+                        resultText: "Approved 71%",
+                        pros: "Allows nurses to purchase pension service credits; Permits 911 dispatchers to increase benefits through SFERS; Helps retain critical workers",
+                        cons: "Increases pension system obligations; Could set precedent for other employee groups",
+                        source: "SF Elections, Ballotpedia"
+                    },
+                    {
+                        id: "Proposition J (San Francisco)",
+                        title: "Children and Youth Programs Funding",
+                        jurisdiction: "San Francisco",
+                        result: "approved",
+                        resultText: "Approved 81%",
+                        pros: "Ensures effective use of children, youth, and families funding; Requires coordination between City Hall and SFUSD; Improves service delivery",
+                        cons: "Charter amendment may be inflexible; Could restrict future budget priorities",
+                        source: "SF Elections, Ballotpedia"
+                    },
+                    {
+                        id: "Proposition K (San Francisco)",
+                        title: "Close Upper Great Highway to Private Vehicles",
+                        jurisdiction: "San Francisco",
+                        result: "approved",
+                        resultText: "Approved 54%",
+                        // NEW: Quick Summary Fields
+                        summary: "Permanently closes the 2-mile Upper Great Highway between Lincoln Way and Sloat Boulevard to private vehicles, converting it to a car-free public recreation space.",
+                        cost: "Minimal direct cost",
+                        funding: "Existing city funds",
+                        impactOnYou: "Traffic detours if you drive this route",
+                        // NEW: Problem & Context
+                        problem: "The Upper Great Highway has been used for both vehicle traffic and recreation. During COVID, it was closed to cars and became a popular walking/cycling space. The city needed to decide its permanent future.",
+                        currentSituation: "Since COVID, the highway has been closed on weekends and some weekdays. This measure makes the closure permanent 7 days a week.",
+                        whoIsImpacted: ["Sunset District residents", "Cyclists and pedestrians", "Beach-goers", "Commuters using the highway"],
+                        benefits: "Recreation, Pedestrian safety, Environment, Quality of life",
+                        isNewOrUpdate: "New permanent policy (was temporary pilot)",
+                        // NEW: Who's Behind It
+                        initiatedBy: {
+                            name: "Supervisor Joel Engardio",
+                            type: "Government",
+                            motivation: "Create permanent public recreation space; supported by Mayor Breed and tech leaders"
+                        },
+                        // NEW: Endorsements
+                        endorsements: {
+                            support: [
+                                { name: "SF Democratic Party", type: "Political Party" },
+                                { name: "Speaker Emerita Nancy Pelosi", type: "Political" },
+                                { name: "Mayor London Breed", type: "Government" },
+                                { name: "SF Chronicle Editorial Board", type: "Media" },
+                                { name: "Jeremy Stoppelman (Yelp founder)", type: "Tech/Business" },
+                                { name: "Golden Gate Bird Alliance", type: "Environmental" },
+                                { name: "Friends of Great Highway Park", type: "Nonprofit" }
+                            ],
+                            oppose: [
+                                { name: "Mayor-elect Daniel Lurie", type: "Political" },
+                                { name: "Board President Aaron Peskin", type: "Government" },
+                                { name: "SPEAK (Sunset-Parkside Education and Action Committee)", type: "Neighborhood Group" },
+                                { name: "Sunset District majority", type: "Community" }
+                            ]
+                        },
+                        pros: "Creates permanent car-free public recreation space; Improves safety for pedestrians and cyclists; Reduces emissions; Popular during COVID closure; Endorsed by Pelosi, Breed, SF Chronicle",
+                        cons: "Displaces traffic to nearby streets; Limits beach access for some residents; Controversial - Sunset District majority voted No; Led to recall of Supervisor Engardio",
+                        source: "SF Elections, Ballotpedia, KQED, SPUR, SF Standard"
+                    },
+                    {
+                        id: "Proposition L (San Francisco)",
+                        title: "Transportation Network and Autonomous Vehicle Tax",
+                        jurisdiction: "San Francisco",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Imposes 1%-4.5% tax on ride-sharing and autonomous vehicle companies above $500,000 gross receipts; Funds public transit; Addresses congestion from TNCs",
+                        cons: "May increase ride costs for consumers; Could slow autonomous vehicle innovation; Tax burden on emerging technology",
+                        source: "SF Elections, Ballotpedia"
+                    },
+                    {
+                        id: "Proposition M (San Francisco)",
+                        title: "Business Tax System Overhaul",
+                        jurisdiction: "San Francisco",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Modernizes business tax rates and calculations; Adjusts gross receipts and administrative office taxes; Updates outdated tax structure",
+                        cons: "Complex changes difficult to understand; Potential unintended consequences; Some businesses may pay more",
+                        source: "SF Elections, Ballotpedia"
+                    },
+                    {
+                        id: "Proposition N (San Francisco)",
+                        title: "First Responder Student Loans and Training",
+                        jurisdiction: "San Francisco",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Creates fund for student loans and training programs; Helps police, firefighters, paramedics, nurses, 911 dispatchers; Addresses staffing shortages",
+                        cons: "Ongoing funding commitment; Could benefit people who leave city employment; Limited accountability",
+                        source: "SF Elections, Ballotpedia"
+                    },
+                    {
+                        id: "Proposition O (San Francisco)",
+                        title: "Reproductive Healthcare and Abortion Protections",
+                        jurisdiction: "San Francisco",
+                        result: "approved",
+                        resultText: "Approved 84%",
+                        pros: "SF will not prosecute individuals for reproductive healthcare access; Establishes Reproductive Freedom Fund; Protects abortion rights locally",
+                        cons: "Largely symbolic as abortion is legal in California; Funds could go to other needs; Federal law could preempt",
+                        source: "SF Elections, Ballotpedia"
+                    },
+                    // ===== ADDITIONAL SANTA CLARA COUNTY MEASURES =====
+                    {
+                        id: "Measure B (Monte Sereno - Santa Clara County)",
+                        title: "Daves Avenue Property Designation",
+                        jurisdiction: "Monte Sereno City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Designates specific property on Daves Avenue; Clarifies land use; Addresses community planning needs",
+                        cons: "Limited impact; Very localized measure",
+                        source: "Ballotpedia, Santa Clara ROV"
+                    },
+                    {
+                        id: "Measure C (Los Altos - Santa Clara County)",
+                        title: "Voter Approval for Parks and Open Space Changes",
+                        jurisdiction: "Los Altos City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Requires voter approval before changing parks, open space, or public land; Protects community assets; Increases citizen control",
+                        cons: "Could slow needed improvements; Adds bureaucracy to land decisions; May limit flexibility",
+                        source: "Ballotpedia, Santa Clara ROV"
+                    },
+                    {
+                        id: "Measure D (Los Altos - Santa Clara County)",
+                        title: "Hotel Tax Increase",
+                        jurisdiction: "Los Altos City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Increases transient occupancy tax; Revenue from visitors, not residents; Funds city services",
+                        cons: "May reduce tourism competitiveness; Passes costs to visitors",
+                        source: "Ballotpedia, Santa Clara ROV"
+                    },
+                    {
+                        id: "Measure E (Palo Alto - Santa Clara County)",
+                        title: "Hotel Tax Increase",
+                        jurisdiction: "Palo Alto City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Increases transient occupancy tax; Captures revenue from business travelers; Funds general services",
+                        cons: "Higher costs for visitors; Business travel competitiveness",
+                        source: "Ballotpedia, Santa Clara ROV"
+                    },
+                    {
+                        id: "Measure F (Palo Alto - Santa Clara County)",
+                        title: "Healthcare Cost Regulations",
+                        jurisdiction: "Palo Alto City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Addresses healthcare costs in city operations; Improves transparency; Protects employees",
+                        cons: "May increase city costs; Regulatory burden",
+                        source: "Ballotpedia, Santa Clara ROV"
+                    },
+                    {
+                        id: "Measure G (Los Gatos - Santa Clara County)",
+                        title: "Sales Tax Increase",
+                        jurisdiction: "Los Gatos Town",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Increases sales tax for general services; Funds infrastructure and public safety; Maintains service levels",
+                        cons: "Higher tax burden on purchases; Could affect local retail competitiveness",
+                        source: "Ballotpedia, Santa Clara ROV"
+                    },
+                    {
+                        id: "Measure H (Morgan Hill - Santa Clara County)",
+                        title: "Hotel Tax Increase",
+                        jurisdiction: "Morgan Hill City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Increases transient occupancy tax; Revenue from visitors; Funds city programs",
+                        cons: "May impact tourism; Higher visitor costs",
+                        source: "Ballotpedia, Santa Clara ROV"
+                    },
+                    {
+                        id: "Measure I (Santa Clara City)",
+                        title: "Infrastructure Bond ($400 Million)",
+                        jurisdiction: "Santa Clara City",
+                        result: "approved",
+                        resultText: "Approved 69%",
+                        pros: "$400 million for infrastructure improvements; Addresses aging facilities; Modernizes city assets; Strong voter support",
+                        cons: "Property tax increase; Large debt obligation; Bond measures need 66% approval",
+                        source: "Silicon Valley Voice, Santa Clara ROV"
+                    },
+                    {
+                        id: "Measure J (Morgan Hill - Santa Clara County)",
+                        title: "Change City Clerk to Appointed Position",
+                        jurisdiction: "Morgan Hill City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Makes city clerk appointed rather than elected; Allows professional hiring; Streamlines operations",
+                        cons: "Reduces voter control; Removes accountability to electorate",
+                        source: "Ballotpedia, Santa Clara ROV"
+                    },
+                    {
+                        id: "Measure K (Sunnyvale - Santa Clara County)",
+                        title: "Hotel Tax Increase",
+                        jurisdiction: "Sunnyvale City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Increases transient occupancy tax; Tech industry visitor revenue; Funds city services",
+                        cons: "Business travel costs; Competition with neighboring cities",
+                        source: "Ballotpedia, Santa Clara ROV"
+                    },
+                    {
+                        id: "Measure L (Sunnyvale - Santa Clara County)",
+                        title: "City Council Vacancy Procedures Charter Amendment",
+                        jurisdiction: "Sunnyvale City",
+                        result: "rejected",
+                        resultText: "Rejected",
+                        pros: "Would update procedures for filling council vacancies; Modernize charter",
+                        cons: "Voters preferred existing procedures; Concerns about process",
+                        source: "Ballotpedia, Santa Clara ROV"
+                    },
+                    {
+                        id: "Sunnyvale Library Bond",
+                        title: "New Main Library Bond ($290 Million)",
+                        jurisdiction: "Sunnyvale City",
+                        result: "rejected",
+                        resultText: "Rejected",
+                        pros: "$290 million to build new main library; Modern facility; Community resource",
+                        cons: "High cost; Did not reach supermajority threshold; Voters concerned about spending",
+                        source: "Silicon Valley Voice, Santa Clara ROV"
+                    },
+                    {
+                        id: "Measure M (Santa Clara City)",
+                        title: "Marijuana Business Tax",
+                        jurisdiction: "Santa Clara City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Establishes tax on marijuana businesses; New revenue source; Regulates emerging industry",
+                        cons: "May discourage cannabis business; Tax burden on legal operators",
+                        source: "Ballotpedia, Santa Clara ROV"
+                    },
+                    {
+                        id: "Measure I (Morgan Hill - Santa Clara County)",
+                        title: "Marijuana Business Tax",
+                        jurisdiction: "Morgan Hill City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Taxes marijuana businesses; Revenue for city services; Mirrors regional approach",
+                        cons: "Could push businesses to other jurisdictions; Tax on legal industry",
+                        source: "Ballotpedia, Santa Clara ROV"
+                    },
+                    {
+                        id: "Measure O (Campbell - Santa Clara County)",
+                        title: "Emergency Services Center and Library Bond",
+                        jurisdiction: "Campbell City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Funds new emergency services center; Improves library facilities; Modernizes critical infrastructure",
+                        cons: "Property tax increase; Debt obligation for residents",
+                        source: "Ballotpedia, Santa Clara ROV"
+                    },
+                    {
+                        id: "Measure P (Mountain View - Santa Clara County)",
+                        title: "Per-Employee Business Tax",
+                        jurisdiction: "Mountain View City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Taxes large employers per employee; Targets tech companies; Significant new revenue; Addresses traffic and housing impacts",
+                        cons: "May discourage business growth; Could push companies to relocate; Tax on job creation",
+                        source: "Ballotpedia, Santa Clara ROV"
+                    },
+                    {
+                        id: "Measure W (West Valley-Mission Community College)",
+                        title: "Community College Bond",
+                        jurisdiction: "West Valley-Mission Community College District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Funds facility improvements at community colleges; Modernizes classrooms; Supports workforce training",
+                        cons: "Property tax increase; Long-term debt obligation",
+                        source: "Ballotpedia, Santa Clara ROV"
+                    },
+                    {
+                        id: "San Jose USD Bond",
+                        title: "School Facilities Bond",
+                        jurisdiction: "San Jose Unified School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Funds school facility improvements; Modernizes aging buildings; Passed with 55% threshold",
+                        cons: "Property tax increase; Large debt commitment",
+                        source: "Ballotpedia, Santa Clara ROV"
+                    },
+                    {
+                        id: "East Side Union HSD Parcel Tax",
+                        title: "School Parcel Tax",
+                        jurisdiction: "East Side Union High School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Parcel tax for educational programs; Maintains class offerings; Required 2/3 supermajority",
+                        cons: "Property tax increase; Burden on homeowners",
+                        source: "Ballotpedia, Santa Clara ROV"
+                    },
+                    {
+                        id: "Campbell Union HSD Bond",
+                        title: "School Facilities Bond",
+                        jurisdiction: "Campbell Union High School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Funds school improvements; Modernizes facilities; Passed with 55% threshold",
+                        cons: "Property tax increase; Debt obligation",
+                        source: "Ballotpedia, Santa Clara ROV"
+                    },
+                    {
+                        id: "Milpitas USD Parcel Tax",
+                        title: "School Parcel Tax",
+                        jurisdiction: "Milpitas Unified School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Parcel tax for educational programs; Required 2/3 supermajority; Maintains programs",
+                        cons: "Property tax increase; Annual cost to homeowners",
+                        source: "Ballotpedia, Santa Clara ROV"
+                    },
+                    // ===== SAN MATEO COUNTY MEASURES =====
+                    {
+                        id: "Measure A (San Mateo County)",
+                        title: "Sheriff Charter Amendment",
+                        jurisdiction: "San Mateo County",
+                        result: "approved",
+                        resultText: "Approved 85%",
+                        // NEW: Quick Summary Fields
+                        summary: "Amends county charter to allow the Board of Supervisors to remove Sheriff Christina Corpus for cause with a 4/5 vote, following a 408-page investigation report.",
+                        cost: "Minimal direct cost",
+                        funding: "General county funds",
+                        impactOnYou: "No direct financial impact",
+                        // NEW: Problem & Context
+                        problem: "A 408-page independent investigation found Sheriff Christina Corpus engaged in misconduct including favoritism, retaliation, and misuse of county resources. Most of her leadership team resigned.",
+                        currentSituation: "Under California law, elected sheriffs can typically only be removed through recall elections, which are costly and time-consuming. This measure provides an alternative path for removal for cause.",
+                        whoIsImpacted: ["Sheriff's department employees", "All county residents", "Crime victims", "County governance"],
+                        benefits: "Government accountability, Public safety, Law enforcement integrity",
+                        isNewOrUpdate: "New charter amendment (temporary until Dec 31, 2028)",
+                        // NEW: Who's Behind It
+                        initiatedBy: {
+                            name: "San Mateo County Board of Supervisors",
+                            type: "Government",
+                            motivation: "Hold Sheriff accountable following independent investigation findings of misconduct"
+                        },
+                        // NEW: Endorsements
+                        endorsements: {
+                            support: [
+                                { name: "San Mateo County Deputy Sheriff's Association", type: "Labor Union" },
+                                { name: "Cities of Belmont, Redwood City, South SF", type: "Government" },
+                                { name: "San Carlos City Council", type: "Government" },
+                                { name: "Supervisors Canepa, Corzo, Mueller, Gauthier", type: "Government" }
+                            ],
+                            oppose: [
+                                { name: "Sheriff Christina Corpus", type: "Elected Official" },
+                                { name: "Dan Stegink (Pacifica resident)", type: "Individual" }
+                            ]
+                        },
+                        pros: "Gives Board of Supervisors power to remove Sheriff Christina Corpus; Responds to 408-page investigation report; Increases accountability; Overwhelming 85% voter support; Backed by Deputy Sheriff's Association",
+                        cons: "Reduces independence of elected Sheriff; Sets precedent for political removal; Sheriff calls it 'anti-democratic'; Should let voters decide via recall election",
+                        source: "The Almanac, Ballotpedia, KQED, Mercury News"
+                    },
+                    {
+                        id: "Measure DD (Belmont - San Mateo County)",
+                        title: "Business License Tax Simplification",
+                        jurisdiction: "Belmont City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Simplifies business license tax structure; Lowers most rates; Generates ~$1.3 million annually; Business-friendly reform",
+                        cons: "Some businesses may pay different rates; Revenue may fluctuate",
+                        source: "Ballotpedia, KQED"
+                    },
+                    {
+                        id: "Measure AA (Colma - San Mateo County)",
+                        title: "Use Tax",
+                        jurisdiction: "Colma Town",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Half-cent sales tax generating ~$2.3 million yearly; Funds town services; Colma known for shopping and cemeteries",
+                        cons: "Higher tax burden; Affects shoppers",
+                        source: "Ballotpedia, KQED"
+                    },
+                    {
+                        id: "Measure BB (Redwood City - San Mateo County)",
+                        title: "Business License Tax Increase",
+                        jurisdiction: "Redwood City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Increases annual business license taxes; $90 registration fee plus $10-$250 per employee; Modernizes revenue structure",
+                        cons: "Higher costs for businesses; May affect small business competitiveness",
+                        source: "Ballotpedia, KQED"
+                    },
+                    {
+                        id: "Measure W (South San Francisco - San Mateo County)",
+                        title: "Business License Tax Modernization",
+                        jurisdiction: "South San Francisco City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Modernizes business licensing; Raises ~$2.6 million annually; Updates outdated system; Biotech hub revenue",
+                        cons: "Increased costs for businesses; May affect competitiveness",
+                        source: "Ballotpedia, KQED"
+                    },
+                    {
+                        id: "Measure T (San Mateo City)",
+                        title: "General Plan Amendment for Taller Buildings",
+                        jurisdiction: "San Mateo City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Allows taller buildings downtown, near Caltrain stations, and along El Camino/Hwy 101; Addresses housing shortage; Transit-oriented development",
+                        cons: "Increased density; Traffic and parking concerns; Changes neighborhood character",
+                        source: "Ballotpedia, KQED"
+                    },
+                    {
+                        id: "Measure CC (Menlo Park - San Mateo County)",
+                        title: "Transient Occupancy Tax Increase",
+                        jurisdiction: "Menlo Park City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Increases hotel tax; Revenue from visitors; Funds city services; Tech industry business travelers",
+                        cons: "Higher visitor costs; Business travel competitiveness",
+                        source: "Ballotpedia, KQED"
+                    },
+                    {
+                        id: "Measure V (Foster City - San Mateo County)",
+                        title: "Business License Tax",
+                        jurisdiction: "Foster City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Updates business license tax; New revenue for city services; Modernizes system",
+                        cons: "Higher business costs; May affect small businesses",
+                        source: "Ballotpedia, KQED"
+                    },
+                    {
+                        id: "Measure FF (Millbrae - San Mateo County)",
+                        title: "City Council Term Limits",
+                        jurisdiction: "Millbrae City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Limits City Council members to three consecutive four-year terms; Brings fresh perspectives; Prevents career politicians",
+                        cons: "Removes experienced members; Voters already have term limit power via elections",
+                        source: "Ballotpedia, KQED"
+                    },
+                    {
+                        id: "Measure L (San Carlos - San Mateo County)",
+                        title: "Change Treasurer to Appointed",
+                        jurisdiction: "San Carlos City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Changes City Treasurer from elected to appointed; Allows professional hiring; Streamlines operations",
+                        cons: "Reduces voter control; Removes direct accountability",
+                        source: "Ballotpedia, KQED"
+                    },
+                    {
+                        id: "Measure M (Pacifica - San Mateo County)",
+                        title: "Transient Occupancy Tax Increase",
+                        jurisdiction: "Pacifica City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Increases hotel tax; Revenue from visitors; Funds coastal city services",
+                        cons: "May reduce tourism; Higher visitor costs",
+                        source: "Ballotpedia, KQED"
+                    },
+                    {
+                        id: "Measure JJ (East Palo Alto - San Mateo County)",
+                        title: "Parcel Tax",
+                        jurisdiction: "East Palo Alto City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Parcel tax for city services; Funds programs in underserved community; Addresses revenue needs",
+                        cons: "Property tax burden; Cost to homeowners",
+                        source: "Ballotpedia, KQED"
+                    },
+                    {
+                        id: "Measure I (Broadmoor Police - San Mateo County)",
+                        title: "Police Protection District Parcel Tax",
+                        jurisdiction: "Broadmoor Police Protection District",
+                        result: "rejected",
+                        resultText: "Rejected",
+                        pros: "Would fund police protection services; Maintain public safety",
+                        cons: "Did not reach required threshold; Voters opposed additional tax",
+                        source: "Ballotpedia, KQED"
+                    },
+                    {
+                        id: "Measure P (Belmont-Redwood Shores Schools - San Mateo County)",
+                        title: "School Bond ($171 Million)",
+                        jurisdiction: "Belmont-Redwood Shores School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "$171 million for school facilities; Modernizes classrooms; Repairs aging buildings",
+                        cons: "Property tax increase; Debt obligation",
+                        source: "Ballotpedia, KQED"
+                    },
+                    {
+                        id: "Measure GG (Burlingame Schools - San Mateo County)",
+                        title: "School Parcel Tax",
+                        jurisdiction: "Burlingame School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Parcel tax for educational programs; Maintains quality schools; Required 2/3 approval",
+                        cons: "Additional property tax; Annual cost to owners",
+                        source: "Ballotpedia, KQED"
+                    },
+                    {
+                        id: "Measure K (Cabrillo USD - San Mateo County)",
+                        title: "School Bond ($153.4 Million)",
+                        jurisdiction: "Cabrillo Unified School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "$153.4 million for school improvements; Coastside schools modernization; Addresses facility needs",
+                        cons: "Property tax increase; Long-term debt",
+                        source: "Ballotpedia, KQED"
+                    },
+                    {
+                        id: "Measure U (Menlo Park Schools - San Mateo County)",
+                        title: "School Bond",
+                        jurisdiction: "Menlo Park City School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "School facilities bond; Modernizes buildings; Serves affluent community",
+                        cons: "Property tax increase; Debt commitment",
+                        source: "Ballotpedia, KQED"
+                    },
+                    {
+                        id: "Measure Z (Jefferson Union HSD - San Mateo County)",
+                        title: "School Parcel Tax",
+                        jurisdiction: "Jefferson Union High School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Parcel tax for high school programs; Maintains course offerings; Required supermajority",
+                        cons: "Property tax burden; Annual homeowner cost",
+                        source: "Ballotpedia, KQED"
+                    },
+                    {
+                        id: "Measure S (Ravenswood Schools - San Mateo County)",
+                        title: "School Parcel Tax",
+                        jurisdiction: "Ravenswood City School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Parcel tax for underserved community; Funds programs in East Palo Alto area; Educational equity",
+                        cons: "Tax burden on property owners; Ongoing commitment",
+                        source: "Ballotpedia, KQED"
+                    },
+                    {
+                        id: "Measure Q (San Bruno - San Mateo County)",
+                        title: "City Bond",
+                        jurisdiction: "San Bruno City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Bond for city improvements; Infrastructure investment; Near SFO airport",
+                        cons: "Debt obligation; Property tax impact",
+                        source: "Ballotpedia, KQED"
+                    },
+                    {
+                        id: "Measure J (Millbrae Elementary - San Mateo County)",
+                        title: "School Bond",
+                        jurisdiction: "Millbrae Elementary School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "School facilities bond; Modernizes elementary schools; Near BART",
+                        cons: "Property tax increase; Debt commitment",
+                        source: "Ballotpedia, KQED"
+                    },
+                    // ===== ADDITIONAL SANTA CRUZ COUNTY MEASURES =====
+                    {
+                        id: "Measure Q (Santa Cruz County)",
+                        title: "Environment, Water, and Wildfire Parcel Tax",
+                        jurisdiction: "Santa Cruz County",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "$87 annual parcel tax; Funds drinking water, rivers, groundwater, beaches, parks, wildfire reduction, wildlife habitat; Comprehensive environmental protection",
+                        cons: "Additional property tax; Broad use of funds; Long-term commitment",
+                        source: "Ballotpedia, Santa Cruz Local"
+                    },
+                    {
+                        id: "Measure Y (Capitola - Santa Cruz County)",
+                        title: "Sales Tax Increase",
+                        jurisdiction: "Capitola City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Replaces existing 0.25% sales tax with 0.5% for 10 years; Funds city services; Beach town needs",
+                        cons: "Doubles existing tax rate; Higher prices for shoppers",
+                        source: "Ballotpedia, Santa Cruz Local"
+                    },
+                    {
+                        id: "Measure Z (Santa Cruz City)",
+                        title: "Sugar-Sweetened Beverages Tax",
+                        jurisdiction: "Santa Cruz City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Two cents per ounce tax on sugary drinks wholesale; Public health measure; Discourages unhealthy beverages; General fund revenue",
+                        cons: "Regressive tax on low-income consumers; Nanny state intervention; May affect local beverage businesses",
+                        source: "Ballotpedia, Santa Cruz Local"
+                    },
+                    {
+                        id: "Measure X (Scotts Valley - Santa Cruz County)",
+                        title: "Business License Tax Increase",
+                        jurisdiction: "Scotts Valley City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Raises base rate from $90 to $150 per business with incremental increases based on gross receipts; Modernizes revenue; Funds city services",
+                        cons: "Higher business costs; May affect small businesses; Competitiveness concerns",
+                        source: "Ballotpedia, Santa Cruz Local"
+                    },
+                    {
+                        id: "Measure V (Watsonville - Santa Cruz County)",
+                        title: "Board Appointment Eligibility Amendment",
+                        jurisdiction: "Watsonville City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Charter amendment addressing board appointment eligibility; Updates governance; Improves city operations",
+                        cons: "May limit appointment flexibility; Technical charter change",
+                        source: "Ballotpedia, Santa Cruz Local"
+                    },
+                    {
+                        id: "Measure W (Watsonville - Santa Cruz County)",
+                        title: "Charter Changes Amendment",
+                        jurisdiction: "Watsonville City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Updates charter provisions on staff positions, city regulations, governance; Modernizes city operations",
+                        cons: "Broad changes; May have unintended consequences",
+                        source: "Ballotpedia, Santa Cruz Local"
+                    },
+                    {
+                        id: "Measure T (Zayante Fire - Santa Cruz County)",
+                        title: "Fire Protection District Parcel Tax",
+                        jurisdiction: "Zayante Fire Protection District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Replaces existing $68 rate with tiered pricing ($50-$290 per parcel); Funds fire protection in mountain community; Wildfire preparedness",
+                        cons: "Some parcels pay more; Significant increase for larger properties",
+                        source: "Ballotpedia, Santa Cruz Local"
+                    },
+                    {
+                        id: "Measure R (Central Fire - Santa Cruz County)",
+                        title: "Fire District Bond ($221 Million)",
+                        jurisdiction: "Central Fire District of Santa Cruz County",
+                        result: "rejected",
+                        resultText: "Rejected",
+                        pros: "$221 million for fire facilities and equipment; Modernizes fire services; Safety improvements",
+                        cons: "Did not reach supermajority threshold; Large debt obligation; Property tax increase",
+                        source: "Ballotpedia, Santa Cruz Local"
+                    },
+                    {
+                        id: "Measure S (Scotts Valley Fire - Santa Cruz County)",
+                        title: "Fire Protection District Bond ($24.5 Million)",
+                        jurisdiction: "Scotts Valley Fire Protection District",
+                        result: "rejected",
+                        resultText: "Rejected",
+                        pros: "$24.5 million for fire services; Estimated $17 per $100,000 assessed value; Equipment and facilities",
+                        cons: "Did not reach required threshold; Voters opposed additional debt",
+                        source: "Ballotpedia, Santa Cruz Local"
+                    },
+                    {
+                        id: "Measure U (San Lorenzo Valley Water - Santa Cruz County)",
+                        title: "Repeal Fixed Water Charges Initiative",
+                        jurisdiction: "San Lorenzo Valley Water District",
+                        result: "rejected",
+                        resultText: "Rejected",
+                        pros: "Would repeal fixed water charges; Limit future increases to 2% annually through 2049; Lower costs for low-usage customers",
+                        cons: "Would destabilize water district funding; Infrastructure needs not addressed; Voters rejected",
+                        source: "Ballotpedia, Santa Cruz Local"
+                    },
+                    {
+                        id: "Measure D (Aromas-San Juan USD - Santa Cruz County)",
+                        title: "School Bond ($44 Million)",
+                        jurisdiction: "Aromas-San Juan Unified School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "$44 million for classroom renovation, modernization, roofs, fire/communication systems; Updates aging facilities",
+                        cons: "Property tax increase; Debt obligation",
+                        source: "Ballotpedia, Santa Cruz Local"
+                    },
+                    {
+                        id: "Measure L (Bonny Doon Elementary - Santa Cruz County)",
+                        title: "School Bond ($7 Million)",
+                        jurisdiction: "Bonny Doon Elementary School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "$7 million for school improvements; Estimated $30 per $100,000 assessed value; Small mountain community school",
+                        cons: "Property tax increase; Small district debt",
+                        source: "Ballotpedia, Santa Cruz Local"
+                    },
+                    {
+                        id: "Measure M (Pajaro Valley USD - Santa Cruz County)",
+                        title: "School Bond ($315 Million)",
+                        jurisdiction: "Pajaro Valley Unified School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "$315 million for classroom renovation, career/technical education, infrastructure; Large district serving Watsonville area; Addresses facility needs",
+                        cons: "Significant property tax increase; Large debt obligation",
+                        source: "Ballotpedia, Santa Cruz Local"
+                    },
+                    {
+                        id: "Measure N (Live Oak Schools - Santa Cruz County)",
+                        title: "School Bond ($45 Million)",
+                        jurisdiction: "Live Oak School District",
+                        result: "rejected",
+                        resultText: "Rejected",
+                        pros: "$45 million for school facilities; Would modernize buildings",
+                        cons: "Did not reach supermajority threshold; Voters opposed additional debt",
+                        source: "Ballotpedia, Santa Cruz Local"
+                    },
+                    {
+                        id: "Measure O (Scotts Valley Schools - Santa Cruz County)",
+                        title: "School Bond ($85 Million)",
+                        jurisdiction: "Scotts Valley School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "$85 million for school facilities; Estimated $49 per $100,000 assessed value; Modernizes district schools",
+                        cons: "Property tax increase; Long-term debt commitment",
+                        source: "Ballotpedia, Santa Cruz Local"
+                    },
+                    {
+                        id: "Measure P (Soquel Elementary - Santa Cruz County)",
+                        title: "School Bond ($73 Million)",
+                        jurisdiction: "Soquel Elementary School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "$73 million for school improvements; Estimated $30 per $100,000 assessed value; Updates facilities",
+                        cons: "Property tax increase; Debt obligation",
+                        source: "Ballotpedia, Santa Cruz Local"
+                    },
+                    {
+                        id: "Measure HH (Lakeside Joint Schools - Santa Cruz County)",
+                        title: "School Parcel Tax Renewal",
+                        jurisdiction: "Lakeside Joint School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Renews $647 parcel tax for eight years; Maintains educational programs; Small district funding",
+                        cons: "High parcel tax amount; Ongoing commitment",
+                        source: "Ballotpedia, Santa Cruz Local"
                     }
                 ]
             },
@@ -1396,7 +2563,185 @@
             text.textContent = pos.abbr;
             svg.appendChild(text);
         });
-        
+
+        // ===== Helper Functions for Enhanced Measure Cards =====
+
+        function getInitiatorIcon(type) {
+            const icons = {
+                'Government': '🏛️',
+                'Industry': '🏢',
+                'Grassroots': '🌱',
+                'Political': '⚖️',
+                'Labor': '✊',
+                'Nonprofit': '💚',
+                'Business': '💼',
+                'Community': '👥'
+            };
+            return icons[type] || '📋';
+        }
+
+        function buildEndorsementsSection(endorsements) {
+            if (!endorsements) return '';
+
+            const supportList = endorsements.support || [];
+            const opposeList = endorsements.oppose || [];
+
+            if (supportList.length === 0 && opposeList.length === 0) return '';
+
+            return `
+                <div class="endorsements-section">
+                    <div class="endorsements-title">Who Supports & Opposes</div>
+                    <div class="endorsements-grid">
+                        <div class="endorsement-column support">
+                            <h4>👍 Support</h4>
+                            <div class="endorsement-chips">
+                                ${supportList.length > 0
+                                    ? supportList.map(e => `<span class="endorsement-chip support" title="${e.type || ''}">${e.name}</span>`).join('')
+                                    : '<span class="no-endorsements">None listed</span>'
+                                }
+                            </div>
+                        </div>
+                        <div class="endorsement-column oppose">
+                            <h4>👎 Oppose</h4>
+                            <div class="endorsement-chips">
+                                ${opposeList.length > 0
+                                    ? opposeList.map(e => `<span class="endorsement-chip oppose" title="${e.type || ''}">${e.name}</span>`).join('')
+                                    : '<span class="no-endorsements">None listed</span>'
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function toggleDetails(btn) {
+            const details = btn.nextElementSibling;
+            details.classList.toggle('expanded');
+            btn.textContent = details.classList.contains('expanded') ? 'Show Less ▲' : 'Learn More ▼';
+        }
+
+        function buildMeasureCard(measure) {
+            const initiatorType = measure.initiatedBy?.type || '';
+            const initiatorClass = `initiator-${initiatorType.toLowerCase().replace(/\s+/g, '')}`;
+            const hasDetails = measure.problem || measure.currentSituation || measure.whoIsImpacted || measure.benefits || measure.isNewOrUpdate;
+
+            // Build quick facts - only show if data exists
+            const hasQuickFacts = measure.cost || measure.funding || measure.impactOnYou;
+            const quickFactsHtml = hasQuickFacts ? `
+                <div class="quick-facts">
+                    <div class="fact-item">
+                        <div class="fact-icon">💰</div>
+                        <div class="fact-label">Cost</div>
+                        <div class="fact-value">${measure.cost || 'Not specified'}</div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-icon">📊</div>
+                        <div class="fact-label">Funding</div>
+                        <div class="fact-value">${measure.funding || 'Not specified'}</div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-icon">👤</div>
+                        <div class="fact-label">Your Cost</div>
+                        <div class="fact-value">${measure.impactOnYou || 'Varies'}</div>
+                    </div>
+                </div>
+            ` : '';
+
+            // Build expandable details section
+            let detailsContentHtml = '';
+            if (hasDetails) {
+                detailsContentHtml = `
+                    <button class="expand-details-btn" onclick="toggleDetails(this)">Learn More ▼</button>
+                    <div class="measure-details">
+                        <div class="details-grid">
+                            ${measure.problem ? `
+                                <div class="detail-section">
+                                    <h4>🎯 Problem Being Solved</h4>
+                                    <p>${measure.problem}</p>
+                                </div>
+                            ` : ''}
+                            ${measure.currentSituation ? `
+                                <div class="detail-section">
+                                    <h4>📋 Current Situation</h4>
+                                    <p>${measure.currentSituation}</p>
+                                </div>
+                            ` : ''}
+                            ${measure.whoIsImpacted && measure.whoIsImpacted.length > 0 ? `
+                                <div class="detail-section">
+                                    <h4>👥 Who Is Impacted</h4>
+                                    <div class="impact-tags">
+                                        ${measure.whoIsImpacted.map(g => `<span class="impact-tag">${g}</span>`).join('')}
+                                    </div>
+                                </div>
+                            ` : ''}
+                            ${measure.benefits ? `
+                                <div class="detail-section">
+                                    <h4>✨ Benefits</h4>
+                                    <p>${measure.benefits}</p>
+                                </div>
+                            ` : ''}
+                            ${measure.isNewOrUpdate ? `
+                                <div class="detail-section">
+                                    <h4>📜 New or Update?</h4>
+                                    <p>${measure.isNewOrUpdate}</p>
+                                </div>
+                            ` : ''}
+                            ${measure.initiatedBy?.motivation ? `
+                                <div class="detail-section">
+                                    <h4>💡 Motivation</h4>
+                                    <p>${measure.initiatedBy.motivation}</p>
+                                </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                `;
+            }
+
+            return `
+                <div class="measure-card" data-measure-id="${measure.id}">
+                    <div class="measure-id" style="color: var(--light-blue); font-size: 0.85rem; margin-bottom: 0.3rem; opacity: 0.9;">📍 ${measure.jurisdiction || 'Statewide'}</div>
+                    <div class="measure-header">
+                        <div>
+                            <div class="measure-title">${measure.title}</div>
+                            <div class="measure-id">${measure.id}</div>
+                        </div>
+                        <div class="result-badge result-${measure.result}">${measure.resultText}</div>
+                    </div>
+
+                    ${measure.initiatedBy ? `
+                        <div class="initiator-badge ${initiatorClass}">
+                            <span>${getInitiatorIcon(measure.initiatedBy.type)}</span>
+                            <span>${measure.initiatedBy.name}</span>
+                        </div>
+                    ` : ''}
+
+                    ${measure.summary ? `<p class="measure-summary">${measure.summary}</p>` : ''}
+
+                    ${quickFactsHtml}
+
+                    ${buildEndorsementsSection(measure.endorsements)}
+
+                    <div class="arguments-section">
+                        <div class="argument-box">
+                            <div class="argument-label pro-label">✓ Pro Arguments</div>
+                            <div class="argument-text">${measure.pros}</div>
+                        </div>
+                        <div class="argument-box">
+                            <div class="argument-label con-label">✗ Con Arguments</div>
+                            <div class="argument-text">${measure.cons}</div>
+                        </div>
+                    </div>
+
+                    ${detailsContentHtml}
+
+                    <div class="source-tag">Source: ${measure.source}</div>
+                </div>
+            `;
+        }
+
+        // ===== End Helper Functions =====
+
         function showStateDetails(stateKey) {
             const state = ballotData[stateKey];
             const panel = document.getElementById('detailsPanel');
@@ -1416,29 +2761,7 @@
             `;
             
             state.measures.forEach(measure => {
-                html += `
-                    <div class="measure-card">
-                        <div class="measure-id" style="color: var(--light-blue); font-size: 0.85rem; margin-bottom: 0.3rem; opacity: 0.9;">📍 ${measure.jurisdiction || 'Statewide'}</div>
-                        <div class="measure-header">
-                            <div>
-                                <div class="measure-title">${measure.title}</div>
-                                <div class="measure-id">${measure.id}</div>
-                            </div>
-                            <div class="result-badge result-${measure.result}">${measure.resultText}</div>
-                        </div>
-                        <div class="arguments-section">
-                            <div class="argument-box">
-                                <div class="argument-label pro-label">✓ Pro Arguments</div>
-                                <div class="argument-text">${measure.pros}</div>
-                            </div>
-                            <div class="argument-box">
-                                <div class="argument-label con-label">✗ Con Arguments</div>
-                                <div class="argument-text">${measure.cons}</div>
-                            </div>
-                        </div>
-                        <div class="source-tag">Source: ${measure.source}</div>
-                    </div>
-                `;
+                html += buildMeasureCard(measure);
             });
             
             html += `
@@ -1470,7 +2793,19 @@
             
             Object.entries(ballotData).forEach(([stateKey, state]) => {
                 state.measures.forEach(measure => {
-                    const searchText = `${measure.title} ${measure.pros} ${measure.cons}`.toLowerCase();
+                    // Search across all relevant fields including new ones
+                    const searchText = `
+                        ${measure.title}
+                        ${measure.pros}
+                        ${measure.cons}
+                        ${measure.summary || ''}
+                        ${measure.problem || ''}
+                        ${measure.currentSituation || ''}
+                        ${(measure.whoIsImpacted || []).join(' ')}
+                        ${measure.initiatedBy?.name || ''}
+                        ${(measure.endorsements?.support || []).map(e => e.name).join(' ')}
+                        ${(measure.endorsements?.oppose || []).map(e => e.name).join(' ')}
+                    `.toLowerCase();
                     if (searchText.includes(query)) {
                         results.push({
                             state: state.name,
@@ -1511,30 +2846,9 @@
             `;
             
             results.forEach(result => {
-                html += `
-                    <div class="measure-card">
-                        <div class="measure-id" style="color: var(--warm-gold); font-size: 1rem; margin-bottom: 0.5rem;">${result.state}</div>
-                        <div class="measure-id" style="color: var(--light-blue); font-size: 0.85rem; margin-bottom: 0.5rem; opacity: 0.9;">📍 ${result.measure.jurisdiction || 'Statewide'}</div>
-                        <div class="measure-header">
-                            <div>
-                                <div class="measure-title">${result.measure.title}</div>
-                                <div class="measure-id">${result.measure.id}</div>
-                            </div>
-                            <div class="result-badge result-${result.measure.result}">${result.measure.resultText}</div>
-                        </div>
-                        <div class="arguments-section">
-                            <div class="argument-box">
-                                <div class="argument-label pro-label">✓ Pro Arguments</div>
-                                <div class="argument-text">${result.measure.pros}</div>
-                            </div>
-                            <div class="argument-box">
-                                <div class="argument-label con-label">✗ Con Arguments</div>
-                                <div class="argument-text">${result.measure.cons}</div>
-                            </div>
-                        </div>
-                        <div class="source-tag">Source: ${result.measure.source}</div>
-                    </div>
-                `;
+                // Add state label before the card for search results
+                html += `<div style="color: var(--warm-gold); font-size: 0.9rem; margin-bottom: 0.5rem; margin-top: 1rem; font-weight: 600;">${result.state}</div>`;
+                html += buildMeasureCard(result.measure);
             });
             
             html += `
