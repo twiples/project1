@@ -15,22 +15,22 @@
         }
 
         :root {
-            /* Colors - Light, minimal palette */
-            --bg-primary: #fafafa;
+            /* Colors - Nest Brand Palette */
+            --bg-primary: #f5f5f5;
             --bg-secondary: #ffffff;
             --bg-glass: rgba(255,255,255,0.8);
             --text-primary: #1a1a1a;
-            --text-secondary: #666666;
-            --text-tertiary: #999999;
-            --accent: #2563eb;
-            --accent-light: #dbeafe;
-            --accent-dark: #1d4ed8;
+            --text-secondary: #7b858e;  /* Nest Raven */
+            --text-tertiary: #a0a8b0;
+            --accent: #00afd8;           /* Nest Cerulean */
+            --accent-light: #e0f7fc;
+            --accent-dark: #0095b8;
             --success: #22c55e;
             --success-light: #dcfce7;
             --danger: #ef4444;
             --danger-light: #fee2e2;
             --border: rgba(0,0,0,0.08);
-            --border-hover: rgba(0,0,0,0.15);
+            --border-hover: rgba(0,175,216,0.3);  /* Nest Blue tint */
 
             /* Shadows */
             --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
@@ -68,7 +68,7 @@
             width: 100%;
             height: 100%;
             background:
-                radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(0, 175, 216, 0.03) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(34, 197, 94, 0.03) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
@@ -654,7 +654,7 @@
             border-radius: 999px;
             font-size: 0.75rem;
             color: var(--accent);
-            border: 1px solid rgba(37, 99, 235, 0.2);
+            border: 1px solid rgba(0, 175, 216, 0.2);
         }
 
         /* ===== END Quick Summary Card Enhancements ===== */
