@@ -2719,6 +2719,27 @@
             return icons[type] || '📋';
         }
 
+        function formatSourceLinks(sourceText) {
+            if (!sourceText) return '';
+
+            const sourceMap = {
+                'Ballotpedia': 'https://ballotpedia.org',
+                'Santa Cruz Local': 'https://santacruzlocal.org',
+                'Lookout Santa Cruz': 'https://lookoutlocal.com'
+            };
+
+            // Split by comma and process each source
+            const sources = sourceText.split(',').map(s => s.trim());
+
+            return sources.map(source => {
+                const url = sourceMap[source];
+                if (url) {
+                    return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">${source}</a>`;
+                }
+                return source;
+            }).join(', ');
+        }
+
         function buildEndorsementsSection(endorsements) {
             if (!endorsements) return '';
 
@@ -2880,7 +2901,7 @@
 
                     ${detailsContentHtml}
 
-                    <div class="source-tag">Source: ${measure.source}</div>
+                    <div class="source-tag">Source: ${formatSourceLinks(measure.source)}</div>
                 </div>
             `;
         }
