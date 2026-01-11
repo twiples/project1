@@ -565,7 +565,7 @@
     <div id="mainContainer" class="main-container">
     <header>
         <h1>Helen's "What's the problem" site</h1>
-        <p class="subtitle">State, county, city & local ballot measures • 59 measures across 14 states</p>
+        <p class="subtitle">State, county, city & local ballot measures • 2025 Elections • 30 statewide + major local measures across 9 states</p>
     </header>
     
     <div class="search-container">
@@ -583,19 +583,19 @@
     <div class="main-content">
         <div class="stats-bar">
             <div class="stat">
-                <span class="stat-number">14</span>
+                <span class="stat-number">9</span>
                 <span class="stat-label">States</span>
             </div>
             <div class="stat">
-                <span class="stat-number">59</span>
+                <span class="stat-number">56</span>
                 <span class="stat-label">Total Measures</span>
             </div>
             <div class="stat">
-                <span class="stat-number">54</span>
+                <span class="stat-number">48</span>
                 <span class="stat-label">Approved</span>
             </div>
             <div class="stat">
-                <span class="stat-number">5</span>
+                <span class="stat-number">8</span>
                 <span class="stat-label">Rejected</span>
             </div>
         </div>
@@ -658,144 +658,46 @@
 
     </script>
     <script>
-        // Ballot measures data - COMPREHENSIVE DATASET
+// Ballot measures data - COMPREHENSIVE 2025 DATASET
         const ballotData = {
-            california: {
-                name: "California",
-                total: 10,
-                approved: 7,
-                rejected: 3,
-                measures: [
-                    {
-                        id: "Proposition 50 (State)",
-                        title: "Congressional Redistricting",
-                        jurisdiction: "Statewide",
-                        result: "approved",
-                        resultText: "Approved 64.4%",
-                        pros: "Levels playing field vs TX GOP gerrymandering; Ensures fair 2026 elections; Temporary (expires 2030); Democrats gain 5 seats",
-                        cons: "Undermines independent commission; Political power grab; Violates 2008/2010 reforms; Dangerous precedent",
-                        source: "CA Secretary of State"
-                    },
-                    {
-                        id: "Measure A (Los Angeles County)",
-                        title: "Homelessness Sales Tax",
-                        jurisdiction: "Los Angeles County",
-                        result: "approved",
-                        resultText: "Approved 58.2%",
-                        pros: "$1B+ annually for homeless services; Replaces Measure H; Includes accountability",
-                        cons: "New tax burden; Not enough oversight; Doesn't address root causes",
-                        source: "LA County Registrar"
-                    },
-                    {
-                        id: "Measure B (San Diego)",
-                        title: "Tourism Marketing District",
-                        jurisdiction: "San Diego City",
-                        result: "approved",
-                        resultText: "Approved 72.1%",
-                        pros: "Boosts tourism economy; No cost to residents; Industry-funded",
-                        cons: "Favors hotel industry; Lacks transparency",
-                        source: "SD County Registrar"
-                    },
-                    {
-                        id: "Measure A (Santa Clara County)",
-                        title: "Sales Tax for Homeless/Transit",
-                        jurisdiction: "Santa Clara County",
-                        result: "approved",
-                        resultText: "Approved 56.3%",
-                        pros: "$350M annually; Addresses two critical needs; Oversight committee",
-                        cons: "Tax fatigue; Unclear how funds split; Past measures haven't solved problem",
-                        source: "Santa Clara County ROV"
-                    },
-                    {
-                        id: "Measure M (Orange County)",
-                        title: "Amusement Tax Repeal",
-                        jurisdiction: "Anaheim City",
-                        result: "approved",
-                        resultText: "Approved 62.1%",
-                        pros: "Supports tourism jobs; Theme parks threatened to leave; Boosts economy",
-                        cons: "Loses city revenue; Favors Disney; Should negotiate better deal",
-                        source: "Orange County ROV"
-                    },
-                    {
-                        id: "Measure K (San Francisco)",
-                        title: "Business Tax Overhaul",
-                        jurisdiction: "San Francisco City",
-                        result: "approved",
-                        resultText: "Approved 59.7%",
-                        pros: "Helps small businesses; Modernizes tax structure; Revenue neutral",
-                        cons: "Complex; May benefit large corps; Reduces progressive elements",
-                        source: "SF Dept of Elections"
-                    },
-                    {
-                        id: "Measure A (Alameda - Oakland Schools)",
-                        title: "Oakland School Bond",
-                        jurisdiction: "Oakland Unified School District",
-                        result: "rejected",
-                        resultText: "Rejected 54.2% (needed 55%)",
-                        pros: "Repair aging schools; Safety improvements; Student needs",
-                        cons: "Massive debt; Enrollment declining; District mismanagement",
-                        source: "Alameda County ROV"
-                    },
-                    {
-                        id: "Measure E (Sacramento)",
-                        title: "Youth Voting for School Board",
-                        jurisdiction: "Sacramento City",
-                        result: "rejected",
-                        resultText: "Rejected 44.7%",
-                        pros: "Students affected by decisions; Civic engagement; Other cities doing it",
-                        cons: "Too young; Not mature enough; Parents vote for them",
-                        source: "Sacramento County ROV"
-                    },
-                    {
-                        id: "Measure Z (Riverside)",
-                        title: "Cannabis Business Tax",
-                        jurisdiction: "Riverside City",
-                        result: "approved",
-                        resultText: "Approved 54.8%",
-                        pros: "New revenue source; Regulates industry; Other cities doing it",
-                        cons: "Drives businesses away; Black market; Too high",
-                        source: "Riverside County ROV"
-                    },
-                    {
-                        id: "Measure C (Contra Costa)",
-                        title: "Rent Control",
-                        jurisdiction: "Richmond City",
-                        result: "rejected",
-                        resultText: "Rejected 46.1%",
-                        pros: "Protects low-income renters; Prevents displacement; Affordable housing crisis",
-                        cons: "Reduces housing supply; Landlords won't invest; Decreases property values",
-                        source: "Contra Costa County ROV"
-                    }
-                ]
-            },
             texas: {
                 name: "Texas",
-                total: 20,
-                approved: 19,
-                rejected: 1,
+                total: 17,
+                approved: 17,
+                rejected: 0,
                 measures: [
                     {
-                        id: "Proposition 1 (State)",
+                        id: "Proposition 1",
                         title: "Texas State Technical College Fund",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved 85.2%",
+                        resultText: "Approved",
                         pros: "$850M for technical colleges and workforce education; Permanent funding; Builds facilities and programs; Supports skilled workforce development",
                         cons: "Locks spending outside regular budget oversight; Reduces legislative flexibility",
-                        source: "Texas Impact"
+                        source: "Texas Tribune, KUT Radio"
                     },
                     {
-                        id: "Proposition 3 (State)",
-                        title: "Bail Denial for Certain Crimes",
+                        id: "Proposition 2",
+                        title: "Ban Capital Gains Tax",
+                        jurisdiction: "Statewide",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Protects investors; Encourages economic growth; Prevents future tax on investments",
+                        cons: "Preemptive measure against non-existent tax; Reduces future revenue options",
+                        source: "Texas Tribune"
+                    },
+                    {
+                        id: "Proposition 3",
+                        title: "Bail Denial for Certain Crimes (Preventive Detention)",
                         jurisdiction: "Statewide",
                         result: "approved",
                         resultText: "Approved",
                         pros: "Keeps dangerous offenders jailed pretrial; Requires prosecutors to prove flight risk/danger; Includes right to attorney at hearing",
-                        cons: "Violates presumption of innocence; Worsens jail overcrowding; Affects 40,000 cases annually; Increases costs; Disproportionate impact on poor defendants",
+                        cons: "Violates presumption of innocence; Worsens jail overcrowding; Affects 40,000 cases annually; Disproportionate impact on poor defendants",
                         source: "ACLU of Texas, KUT Radio"
                     },
                     {
-                        id: "Proposition 4 (State)",
+                        id: "Proposition 4",
                         title: "Texas Water Fund",
                         jurisdiction: "Statewide",
                         result: "approved",
@@ -805,7 +707,117 @@
                         source: "Texas Water Development Board"
                     },
                     {
-                        id: "Proposition 16 (State)",
+                        id: "Proposition 5",
+                        title: "Property Tax Exemption for Animal Feed",
+                        jurisdiction: "Statewide",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Helps farmers and ranchers; Reduces agricultural costs; Supports rural economy",
+                        cons: "Reduces property tax revenue; Benefits specific industry",
+                        source: "Texas Tribune"
+                    },
+                    {
+                        id: "Proposition 6",
+                        title: "Ban Securities Transaction Taxes",
+                        jurisdiction: "Statewide",
+                        result: "approved",
+                        resultText: "Approved 54.9%",
+                        pros: "Protects financial services industry; Encourages business growth; Prevents future taxes",
+                        cons: "Preemptive restriction; Limits future revenue options; Favors financial sector",
+                        source: "Texas Tribune"
+                    },
+                    {
+                        id: "Proposition 7",
+                        title: "Extend Property Tax Exemptions to Veterans' Surviving Spouses",
+                        jurisdiction: "Statewide",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Supports military families; Extends benefits to surviving spouses of veterans who died from service-related conditions",
+                        cons: "Reduces property tax revenue",
+                        source: "Texas Tribune"
+                    },
+                    {
+                        id: "Proposition 8",
+                        title: "Ban Inheritance Taxes",
+                        jurisdiction: "Statewide",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Protects estates; Ensures lawmakers cannot impose estate/inheritance taxes; Family financial security",
+                        cons: "Texas already has no inheritance tax; Purely symbolic; Limits future options",
+                        source: "Texas Tribune"
+                    },
+                    {
+                        id: "Proposition 9",
+                        title: "Exempt Business Equipment and Inventory from Property Taxes",
+                        jurisdiction: "Statewide",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Reduces business costs; Encourages economic growth; Supports small businesses",
+                        cons: "Significant revenue loss; Shifts tax burden to homeowners",
+                        source: "Texas Tribune"
+                    },
+                    {
+                        id: "Proposition 10",
+                        title: "Temporary Property Tax Exemption for Fire-Damaged Homes",
+                        jurisdiction: "Statewide",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Provides relief to disaster victims; Temporary exemption while rebuilding; Compassionate policy",
+                        cons: "Reduces local revenue; Administrative complexity",
+                        source: "Texas Tribune"
+                    },
+                    {
+                        id: "Proposition 11",
+                        title: "Increase Homestead Exemption + Senior/Disability Exemption",
+                        jurisdiction: "Statewide",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Increases exemption from $100K to $140K for all homeowners; Extra $60K exemption for seniors/disabled; Significant tax relief",
+                        cons: "Major revenue loss for schools and local governments; Shifts costs",
+                        source: "Texas Tribune"
+                    },
+                    {
+                        id: "Proposition 12",
+                        title: "State Commission on Judicial Conduct Reform",
+                        jurisdiction: "Statewide",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Reforms membership and authority; Improves judicial oversight; Increases accountability",
+                        cons: "Changes established oversight structure",
+                        source: "Texas Tribune"
+                    },
+                    {
+                        id: "Proposition 13",
+                        title: "Raise Homestead Exemption to $140,000",
+                        jurisdiction: "Statewide",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Property tax relief for all homeowners; Increases from $100K to $140K; Reduces tax burden",
+                        cons: "Reduces revenue for schools and local services",
+                        source: "Texas Tribune"
+                    },
+                    {
+                        id: "Proposition 14",
+                        title: "Texas Dementia Prevention and Research Institute",
+                        jurisdiction: "Statewide",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "$3 billion investment for Alzheimer's research; Modeled after successful cancer research program; Addresses growing health crisis",
+                        cons: "Massive debt; Competes with other health priorities; Long-term obligation",
+                        source: "Texas Tribune"
+                    },
+                    {
+                        id: "Proposition 15",
+                        title: "Parental Rights Amendment",
+                        jurisdiction: "Statewide",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Affirms parents as primary decision makers for children; Protects parental authority; Codifies existing rights",
+                        cons: "State law already guarantees these rights; Purely symbolic; Vague language could cause legal issues",
+                        source: "Texas AFT, Texas Tribune"
+                    },
+                    {
+                        id: "Proposition 16",
                         title: "Citizenship Voting Requirement",
                         jurisdiction: "Statewide",
                         result: "approved",
@@ -815,44 +827,280 @@
                         source: "KUT Radio, Texas Standard"
                     },
                     {
-                        id: "Proposition F (Harris County)",
-                        title: "Flood Control Bond",
-                        jurisdiction: "Harris County",
+                        id: "Proposition 17",
+                        title: "Property Tax Exemption for Border Security Infrastructure",
+                        jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved 61.5%",
-                        pros: "$2.5B bond for flood infrastructure and drainage; Critical infrastructure; Prevents flooding; Post-Harvey necessity",
-                        cons: "Increases property taxes; Expensive debt",
-                        source: "Harris County Clerk"
+                        resultText: "Approved",
+                        pros: "Prevents property values from increasing due to border security infrastructure; Protects border county residents",
+                        cons: "Very specific exemption; May reduce local revenue",
+                        source: "Texas Tribune"
+                    }
+                ]
+            },
+            california: {
+                name: "California",
+                total: 16,
+                approved: 12,
+                rejected: 4,
+                measures: [
+                    {
+                        id: "Proposition 50",
+                        title: "Congressional Redistricting",
+                        jurisdiction: "Statewide",
+                        result: "approved",
+                        resultText: "Approved 70%",
+                        pros: "Allows new legislature-drawn congressional map for 2026-2030; Could net Democrats 5 seats; Temporary measure expires 2030; Levels playing field vs Republican gerrymandering in other states",
+                        cons: "Undermines independent redistricting commission; Political power grab; Violates 2008/2010 reforms; Dangerous precedent",
+                        source: "CA Secretary of State, CalMatters, NPR"
                     },
                     {
-                        id: "Proposition D (Dallas County)",
-                        title: "DART Sales Tax",
-                        jurisdiction: "Dallas Area Rapid Transit",
+                        id: "Measure A (Santa Clara County)",
+                        title: "Sales Tax for Health Care",
+                        jurisdiction: "Santa Clara County",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "0.625% sales tax increase for 5 years; Raises $330M annually; Offsets federal Medicaid cuts; Keeps county hospitals open; Backfills deep federal cuts to social safety net",
+                        cons: "General tax with no guarantee for healthcare; Regressive taxation hitting low-income hardest; Blank check with no oversight; County should operate fewer hospitals",
+                        source: "KQED, Mercury News, SPUR"
+                    },
+                    {
+                        id: "Measure G (Truckee Library District - Nevada County)",
+                        title: "Library Replacement Parcel Tax",
+                        jurisdiction: "Truckee Library District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "$29 annual parcel tax for 30 years to replace aging library; Critical community resource; Updated facilities needed",
+                        cons: "Long-term tax commitment; High total cost; Alternative funding options",
+                        source: "Ballotpedia"
+                    },
+                    {
+                        id: "Measure C (Santa Cruz County)",
+                        title: "Housing and Homelessness Parcel Tax",
+                        jurisdiction: "Santa Cruz County",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "$96 annual parcel tax plus graduated real estate transfer tax; Funds housing and homelessness reduction; Addresses critical need",
+                        cons: "High tax burden; Real estate transfer tax could slow housing market; May not solve root causes",
+                        source: "Ballotpedia"
+                    },
+                    {
+                        id: "Measure B (Delano - Kern County)",
+                        title: "Sales Tax Renewal",
+                        jurisdiction: "Delano City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Renews 1% sales tax indefinitely for city services; Maintains current services; No new tax",
+                        cons: "Indefinite tax with no sunset; Reduces oversight; Combined rate reaches 8.25%",
+                        source: "Ballotpedia"
+                    },
+                    {
+                        id: "Measure C (McFarland - Kern County)",
+                        title: "Transactions and Use Tax Increase",
+                        jurisdiction: "McFarland City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "1% increase for city services; Funds infrastructure and public safety",
+                        cons: "High combined rate of 9.25%; Tax burden on residents; General purpose with limited accountability",
+                        source: "Ballotpedia"
+                    },
+                    {
+                        id: "Measure J (Sausalito - Marin County)",
+                        title: "Residential Overlay Zoning for Commercial Sites",
+                        jurisdiction: "Sausalito City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Allows residential development on 12 commercial sites; Addresses housing shortage; Mixed-use development",
+                        cons: "Reduces commercial space; May increase density; Traffic concerns",
+                        source: "Ballotpedia"
+                    },
+                    {
+                        id: "Measure K (Sausalito - Marin County)",
+                        title: "MLK Property Residential Zoning",
+                        jurisdiction: "Sausalito City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Allows up to 50 housing units on Martin Luther King Jr. property; Addresses housing crisis; Community-centered development",
+                        cons: "High density for area; Parking and infrastructure concerns",
+                        source: "Ballotpedia"
+                    },
+                    {
+                        id: "Measure C (Grenada Fire Protection District - Siskiyou County)",
+                        title: "Spending Limit Extension",
+                        jurisdiction: "Grenada Fire Protection District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Maintains $50,000 spending limit for four years; Allows continued operations; No tax increase",
+                        cons: "Increases spending authority without voter approval for each expenditure",
+                        source: "Ballotpedia"
+                    },
+                    {
+                        id: "Measure D (Dunsmuir - Siskiyou County)",
+                        title: "Sales Tax for City Services",
+                        jurisdiction: "Dunsmuir City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "1% sales tax for city services and facilities; Maintains infrastructure; Funds public safety",
+                        cons: "Tax burden on residents and visitors; General fund with limited accountability",
+                        source: "Ballotpedia"
+                    },
+                    {
+                        id: "Measure L (Santa Fe Springs - LA County)",
+                        title: "Sales Tax for County Services",
+                        jurisdiction: "Santa Fe Springs City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "$0.0025 sales tax increase for county services; Maintains service levels; Modest increase",
+                        cons: "Adds to high LA County tax burden; Lack of specific service guarantees",
+                        source: "Ballotpedia"
+                    },
+                    {
+                        id: "Measure B (Washington Township Healthcare - Alameda County)",
+                        title: "Healthcare Parcel Tax",
+                        jurisdiction: "Washington Township Health Care District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "$0.05/sq ft parcel tax for 12 years; Funds health care services; Supports local hospital",
+                        cons: "Property tax increase; Long-term commitment; Should seek other revenue",
+                        source: "Ballotpedia"
+                    },
+                    {
+                        id: "Measure B (Fernwood-Cothrin Ranch - El Dorado County)",
+                        title: "Road Improvements Parcel Tax",
+                        jurisdiction: "Fernwood-Cothrin Ranch Zone",
                         result: "rejected",
-                        resultText: "Rejected 48.2%",
-                        pros: "Funds public transit; Reduces traffic; Environmental benefits",
-                        cons: "DART inefficient; Low ridership; Need accountability first",
-                        source: "Dallas County Elections"
+                        resultText: "Rejected",
+                        pros: "$450 annual parcel tax for road improvements; Addresses infrastructure needs",
+                        cons: "High cost for small benefit area; Property owners rejected; Alternative funding needed",
+                        source: "Ballotpedia"
                     },
                     {
-                        id: "Proposition A (Travis County)",
-                        title: "Parks & Recreation Bond",
-                        jurisdiction: "Austin City",
-                        result: "approved",
-                        resultText: "Approved 72.8%",
-                        pros: "$460M bond for parks and recreation facilities; Addresses park shortage; Green space; Community centers",
-                        cons: "High cost; Gentrification concerns; Property tax impact",
-                        source: "Travis County Clerk"
+                        id: "Measure E (Walnut Drive - El Dorado County)",
+                        title: "Road Maintenance Parcel Tax",
+                        jurisdiction: "Walnut Drive Zone",
+                        result: "rejected",
+                        resultText: "Rejected",
+                        pros: "$685 annual parcel tax for road maintenance; Improves infrastructure",
+                        cons: "Very high annual cost; Rejected by property owners; Unsustainable",
+                        source: "Ballotpedia"
                     },
                     {
-                        id: "Proposition B (Bexar County)",
-                        title: "NISD Bond",
-                        jurisdiction: "Northside ISD School District",
+                        id: "Measure I (Petaluma Joint Union HS District - Marin County)",
+                        title: "School Parcel Tax",
+                        jurisdiction: "Petaluma Joint Union High School District",
+                        result: "rejected",
+                        resultText: "Rejected",
+                        pros: "$129 annual parcel tax for eight years; Maintains educational programs; Prevents cuts",
+                        cons: "Tax fatigue; District should cut costs first; Didn't reach supermajority",
+                        source: "Ballotpedia"
+                    },
+                    {
+                        id: "Measure A (Redding - Shasta County)",
+                        title: "Sales Tax Increase",
+                        jurisdiction: "Redding City",
+                        result: "rejected",
+                        resultText: "Rejected",
+                        pros: "1% sales tax increase for city services; Combined rate 8.25%; Funds infrastructure",
+                        cons: "Tax burden; City should reduce spending; Economic impact on businesses",
+                        source: "Ballotpedia"
+                    }
+                ]
+            },
+            washington: {
+                name: "Washington",
+                total: 9,
+                approved: 9,
+                rejected: 0,
+                measures: [
+                    {
+                        id: "SJR 8201",
+                        title: "Long-Term Services & Supports Trust Fund Investment",
+                        jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved 69.4%",
-                        pros: "$1.3B Northside ISD facilities bond; New schools; Technology; Safety improvements; Enrollment growth",
-                        cons: "Huge debt; Property tax impact; Some areas over-built",
-                        source: "Bexar County Elections"
+                        resultText: "Approved 58%",
+                        pros: "Allows LTSS Trust Fund (WA Cares Fund) to invest in stocks/equities; Potential for higher returns; Strengthens long-term care program",
+                        cons: "Similar measure defeated in 2020; Increased investment risk; Market volatility concerns",
+                        source: "WA Secretary of State, Ballotpedia"
+                    },
+                    {
+                        id: "Proposition 1 (Seattle)",
+                        title: "Families, Education, Preschool & Promise (FEPP) Levy",
+                        jurisdiction: "Seattle City",
+                        result: "approved",
+                        resultText: "Approved 80%",
+                        pros: "Six-year levy raising $1.26B max for education support; Doubles childcare assistance to 1,400 families; Expands preschool by 600 seats; Maintains Seattle Promise free 2-year tuition; Adds 5 school health clinics",
+                        cons: "$654 annually for median home; Grades haven't improved despite previous levies; Tax burden in expensive city; Lack of accountability",
+                        source: "Seattle Channel, Ballotpedia, United Way"
+                    },
+                    {
+                        id: "Proposition 2 (Seattle)",
+                        title: "Business & Occupation Tax Reform (Seattle Shield)",
+                        jurisdiction: "Seattle City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Restructures B&O tax; Exempts 75% of businesses (those under $2M); Progressive reform; Raises $81M annually for services; Helps small businesses",
+                        cons: "50% tax increase for remaining large businesses; Hurts 'hometown' companies; Volatile economic climate; Uncertain revenue",
+                        source: "Seattle Channel, Daily UW"
+                    },
+                    {
+                        id: "Proposition 1 (King County)",
+                        title: "Emergency Medical Services Property Tax",
+                        jurisdiction: "King County",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Funds EMS operations; Maintains response times; Critical emergency services; Replaces expiring levy",
+                        cons: "Property tax increase; EMS should find efficiencies; Cost burden",
+                        source: "King County Elections, NPI Cascadia Advocate"
+                    },
+                    {
+                        id: "Proposition 1 (Spokane Parks)",
+                        title: "Parks & Recreation Levy",
+                        jurisdiction: "Spokane City",
+                        result: "approved",
+                        resultText: "Approved 55.2%",
+                        pros: "$240M over 20 years for parks; Hires 5 park rangers; 35% for maintenance/safety; 50%+ for playgrounds, restrooms, amenities; Bipartisan support; $96/year for average home",
+                        cons: "Parks overrun by addiction issues; Ranger authority too limited; City ignores voter will; Death by thousand cuts; 13% live below poverty; Should be scaled back",
+                        source: "Spokesman-Review, KXLY, RANGE Media"
+                    },
+                    {
+                        id: "School Bond (Spokane)",
+                        title: "Spokane Public Schools Bond",
+                        jurisdiction: "Spokane Public Schools",
+                        result: "approved",
+                        resultText: "Approved 61.2%",
+                        pros: "$200M bond for school facilities; Part of Together Spokane; Addresses critical needs; $6/year for average home",
+                        cons: "Tax increase; Should seek smaller proposals; District should prioritize urgent projects only",
+                        source: "Spokesman-Review, Inlander"
+                    },
+                    {
+                        id: "Ellensburg Transit Sales Tax",
+                        title: "Transportation Benefit District Sales Tax Swap",
+                        jurisdiction: "Ellensburg City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Swaps temporary 0.2% TBD sales tax for permanent 0.2% transit tax; No increase; Stabilizes transit funding",
+                        cons: "Makes temporary tax permanent; Reduces future flexibility",
+                        source: "MRSC"
+                    },
+                    {
+                        id: "Bothell Levy Lid Lift",
+                        title: "Streets and Sidewalks Levy",
+                        jurisdiction: "Bothell City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Nine-year levy for street/sidewalk improvements; Infrastructure investment; Safety improvements",
+                        cons: "Property tax increase; Long commitment; City should use existing funds",
+                        source: "MRSC"
+                    },
+                    {
+                        id: "Yakima County Marijuana Ban",
+                        title: "Marijuana Ban Outside Cities",
+                        jurisdiction: "Yakima County",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Upholds marijuana ban in unincorporated areas; Community standards; Local control",
+                        cons: "Restricts legal industry; Reduces tax revenue; Out of step with state law",
+                        source: "Apple Valley News Now"
                     }
                 ]
             },
@@ -865,18 +1113,20 @@
                     {
                         id: "Question 1",
                         title: "Voter Photo ID and Absentee Ballot Changes",
+                        jurisdiction: "Statewide",
                         result: "rejected",
                         resultText: "Rejected",
                         pros: "Prevents voter fraud; Ensures election integrity; Requires photo ID for in-person and absentee voting",
-                        cons: "Limits voting access; Eliminates two days of absentee voting; Ends automatic absentee ballots for seniors/disabled; League of Women Voters opposed",
-                        source: "State Court Report, Ballotpedia"
+                        cons: "Limits voting access; Eliminates two days of absentee voting; Ends automatic absentee ballots for seniors/disabled; First voter ID defeat in 10+ years; League of Women Voters opposed",
+                        source: "State Court Report, Ballotpedia, CNN"
                     },
                     {
                         id: "Question 2",
                         title: "Extreme Risk Protection Order (Red Flag Law)",
+                        jurisdiction: "Statewide",
                         result: "approved",
                         resultText: "Approved",
-                        pros: "Allows courts to temporarily restrict firearms access; Law enforcement and family can petition; Protects people at risk",
+                        pros: "Allows courts to temporarily restrict firearms access; Law enforcement and family can petition; Protects people at risk; Prevents tragedies",
                         cons: "Gov. Janet Mills opposed; Argued existing laws already allow firearm removal; Burdens family members to navigate court process",
                         source: "State Court Report, Ballotpedia"
                     }
@@ -891,48 +1141,148 @@
                     {
                         id: "Proposition LL",
                         title: "Retain Revenue for School Meals Program",
+                        jurisdiction: "Statewide",
                         result: "approved",
                         resultText: "Approved",
-                        pros: "Allows state to keep $12.4M in excess revenue; Funds Healthy School Meals for All program; No new taxes",
-                        cons: "Under TABOR must refund excess revenue to taxpayers",
-                        source: "Ballotpedia News"
+                        pros: "Allows state to keep $12.4M in excess revenue; Funds Healthy School Meals for All program; No new taxes; Maintains free meal program",
+                        cons: "Under TABOR must refund excess revenue to taxpayers; Reduces refunds",
+                        source: "Ballotpedia, NBC News"
                     },
                     {
                         id: "Proposition MM",
                         title: "Reduce Tax Deductions for School Meals Funding",
+                        jurisdiction: "Statewide",
                         result: "approved",
                         resultText: "Approved",
-                        pros: "Reduces deductions for $300K+ earners; Generates additional revenue for school meals and SNAP; Progressive tax approach",
-                        cons: "Tax increase on higher earners",
-                        source: "Ballotpedia News"
+                        pros: "Reduces deductions for $300K+ earners; Generates additional revenue for school meals and SNAP; Progressive tax approach; Funds nutrition programs",
+                        cons: "Tax increase on higher earners; Reduces itemized deductions",
+                        source: "Ballotpedia, NBC News"
                     }
                 ]
             },
             newyork: {
                 name: "New York",
-                total: 2,
-                approved: 2,
+                total: 1,
+                approved: 1,
                 rejected: 0,
                 measures: [
                     {
-                        id: "Amendment 1 (State)",
-                        title: "Mount Van Hoevenberg Winter Sports",
+                        id: "Proposal 1",
+                        title: "Mount Van Hoevenberg Winter Sports Development",
                         jurisdiction: "Statewide",
                         result: "approved",
                         resultText: "Approved",
-                        pros: "Allows winter sports facility development on 323 acres; Preserves 2,500+ acres of forest; Supports Olympics infrastructure",
-                        cons: "Uses Adirondack forest preserve land; Environmental concerns",
-                        source: "State Court Report, Ballotpedia"
+                        pros: "Allows winter sports facility development on 323 acres; Preserves 2,500+ acres of forest; Supports Olympics infrastructure; Economic development",
+                        cons: "Uses Adirondack forest preserve land; Environmental concerns; Development in protected area",
+                        source: "Ballotpedia, State Court Report"
+                    }
+                ]
+            },
+            arizona: {
+                name: "Arizona",
+                total: 10,
+                approved: 10,
+                rejected: 0,
+                measures: [
+                    {
+                        id: "Proposition 410 (Chandler)",
+                        title: "Term Limits Charter Amendment",
+                        jurisdiction: "Chandler City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Clarifies term limits for mayor and councilmembers; Improves charter clarity; Good governance",
+                        cons: "Restricts voter choice; Experienced officials term out",
+                        source: "City of Chandler, Ballotpedia"
                     },
                     {
-                        id: "Proposal 1 (NYC)",
-                        title: "Ranked Choice Voting for Mayor",
-                        jurisdiction: "New York City",
+                        id: "Proposition 411 (Chandler)",
+                        title: "City Manager Appointment Charter Amendment",
+                        jurisdiction: "Chandler City",
                         result: "approved",
-                        resultText: "Approved 52.3%",
-                        pros: "Implements ranked choice voting for mayoral elections; More choice; Majority winner; Reduces negative campaigning",
-                        cons: "Confusing; Delays results; Benefits certain candidates",
-                        source: "NYC Board of Elections"
+                        resultText: "Approved",
+                        pros: "Clarifies appointment and removal process for city manager; Improves governance structure; Reduces confusion",
+                        cons: "May concentrate power; Process changes",
+                        source: "City of Chandler, Ballotpedia"
+                    },
+                    {
+                        id: "Question 1 (Chandler)",
+                        title: "Parks and Recreation Bond",
+                        jurisdiction: "Chandler City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "$158M for community, neighborhood, regional parks; Aquatic centers; Arts/cultural centers; Recreation facilities; No tax rate increase (timed with retiring debt)",
+                        cons: "Inflation drove need for new bond sooner than planned; Large capital commitment",
+                        source: "City of Chandler"
+                    },
+                    {
+                        id: "Question 2 (Chandler)",
+                        title: "Fire Department Bond",
+                        jurisdiction: "Chandler City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "$88M to enhance Fire Dept services/response; Improved facilities and equipment; Better emergency response; No tax rate increase",
+                        cons: "Part of large $475M bond package; Growing population",
+                        source: "City of Chandler"
+                    },
+                    {
+                        id: "Question 3 (Chandler)",
+                        title: "Police Department Bond",
+                        jurisdiction: "Chandler City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Enhance Police Dept services/response; Improved facilities and equipment; Public safety; No tax rate increase",
+                        cons: "Part of $475M package; Alternative funding options",
+                        source: "City of Chandler"
+                    },
+                    {
+                        id: "Question 4 (Chandler)",
+                        title: "Streets Bond",
+                        jurisdiction: "Chandler City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Keep streets safe; Improve traffic flow; Reduce commute times; Infrastructure investment; No tax rate increase",
+                        cons: "Part of $475M bond; Traffic remains challenge",
+                        source: "City of Chandler"
+                    },
+                    {
+                        id: "Proposition 415 (Flowing Wells USD - Pima County)",
+                        title: "School Bond",
+                        jurisdiction: "Flowing Wells Unified School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Bond for school facilities and improvements; Addresses infrastructure needs; Student safety and learning",
+                        cons: "Property tax impact; Debt burden",
+                        source: "Pima County Elections"
+                    },
+                    {
+                        id: "Proposition 416 (Sunnyside USD - Pima County)",
+                        title: "School Bond",
+                        jurisdiction: "Sunnyside Unified School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "School facilities bond; Modernizes classrooms; Safety improvements; Growing enrollment",
+                        cons: "Tax increase; Long-term debt",
+                        source: "Pima County Elections"
+                    },
+                    {
+                        id: "Proposition 417 (Tucson - Pima County)",
+                        title: "General Plan Ratification",
+                        jurisdiction: "Tucson City",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Ratifies comprehensive general plan; Guides city development; Community input; Long-term planning",
+                        cons: "Development concerns; Growth impacts",
+                        source: "Pima County Elections"
+                    },
+                    {
+                        id: "Proposition 414 (Tucson USD - Pima County)",
+                        title: "School Budget Override",
+                        jurisdiction: "Tucson Unified School District",
+                        result: "approved",
+                        resultText: "Approved",
+                        pros: "Budget override to maintain programs; Prevents cuts; Teacher retention; Class sizes; Student services",
+                        cons: "Property tax increase; District should find efficiencies first",
+                        source: "Pima County Elections"
                     }
                 ]
             },
@@ -943,202 +1293,31 @@
                 rejected: 0,
                 measures: [
                     {
-                        id: "Transit Funding (Cook County)",
-                        title: "CTA Funding Increase",
+                        id: "Cook County Transit Funding",
+                        title: "CTA Property Tax Increase",
                         jurisdiction: "Cook County",
                         result: "approved",
-                        resultText: "Approved 55.7%",
-                        pros: "Increase property tax for Chicago Transit Authority; Maintains service; Prevents cuts; Critical infrastructure",
-                        cons: "Tax burden; CTA mismanagement; Ridership down",
+                        resultText: "Approved",
+                        pros: "Property tax increase for Chicago Transit Authority; Maintains service; Prevents cuts; Critical infrastructure; Public transit access",
+                        cons: "Tax burden; CTA mismanagement; Ridership down; Should reform before raising taxes",
                         source: "Chicago Board of Elections"
-                    }
-                ]
-            },
-            florida: {
-                name: "Florida",
-                total: 1,
-                approved: 1,
-                rejected: 0,
-                measures: [
-                    {
-                        id: "Question A (Miami-Dade)",
-                        title: "Sea Level Rise Bond",
-                        jurisdiction: "Miami-Dade County",
-                        result: "approved",
-                        resultText: "Approved 61.8%",
-                        pros: "$2B bond for sea level rise infrastructure; Climate resilience; Flood protection; Future necessity",
-                        cons: "Expensive; Uncertain effectiveness; Could relocate instead",
-                        source: "Miami-Dade Elections"
-                    }
-                ]
-            },
-            washington: {
-                name: "Washington",
-                total: 8,
-                approved: 7,
-                rejected: 1,
-                measures: [
-                    {
-                        id: "Initiative 1 (State)",
-                        title: "LTSS Trust Fund Stock Investments",
-                        jurisdiction: "Statewide",
-                        result: "approved",
-                        resultText: "Approved",
-                        pros: "Allows long-term care trust fund to invest in stocks; Potential for higher returns",
-                        cons: "Similar measure defeated in 2020; Increased investment risk; Market volatility concerns",
-                        source: "Ballotpedia News"
-                    },
-                    {
-                        id: "Proposition 1 (King County)",
-                        title: "Library Capital Levy",
-                        jurisdiction: "King County",
-                        result: "approved",
-                        resultText: "Approved 64.9%",
-                        pros: "$160M for library renovations; Technology upgrades; Seismic retrofits; 6-year levy",
-                        cons: "Property tax increase; Libraries should use existing funds",
-                        source: "King County Elections"
-                    },
-                    {
-                        id: "Proposition 1 (Snohomish County)",
-                        title: "Fire District 7 Levy",
-                        jurisdiction: "Fire District 7",
-                        result: "approved",
-                        resultText: "Approved 67.3%",
-                        pros: "4-year levy; Improves response times; Hires 12 firefighters; Aging equipment replacement",
-                        cons: "Property tax increase; District should cut costs",
-                        source: "Snohomish County Elections"
-                    },
-                    {
-                        id: "Proposition 1 (Pierce County)",
-                        title: "Pierce Transit Sales Tax",
-                        jurisdiction: "Pierce Transit District",
-                        result: "approved",
-                        resultText: "Approved 51.2%",
-                        pros: "Increase sales tax 0.3% for expanded bus service; More routes; Improved frequency; ADA accessibility",
-                        cons: "Tax increase; Low current ridership; Cars more convenient",
-                        source: "Pierce County Elections"
-                    },
-                    {
-                        id: "Proposition 1 (Spokane)",
-                        title: "Police & Fire Levy",
-                        jurisdiction: "Spokane City",
-                        result: "approved",
-                        resultText: "Approved 58.9%",
-                        pros: "6-year levy for police and fire operations; Staffing shortages; Response times; Critical services",
-                        cons: "Property tax increase; Need reform not more money",
-                        source: "Spokane County Elections"
-                    },
-                    {
-                        id: "Proposition 1 (Thurston County)",
-                        title: "Hospital District Bond",
-                        jurisdiction: "Hospital District",
-                        result: "approved",
-                        resultText: "Approved 63.2%",
-                        pros: "$45M bond for medical imaging suite and improvements; Updated equipment; Patient care; Safety requirements",
-                        cons: "Property tax impact; Hospital should fundraise",
-                        source: "Thurston County Elections"
-                    }
-                ]
-            },
-            arizona: {
-                name: "Arizona",
-                total: 5,
-                approved: 4,
-                rejected: 1,
-                measures: [
-                    {
-                        id: "Proposition 479 (Maricopa County)",
-                        title: "Transportation Tax Extension",
-                        jurisdiction: "Maricopa County",
-                        result: "approved",
-                        resultText: "Approved 55.8%",
-                        pros: "Extends half-cent sales tax for transportation 20 years; Funds light rail; Roads; Public transit; Already approved before",
-                        cons: "Long-term tax commitment; Traffic still bad; Light rail underused",
-                        source: "Maricopa County Recorder"
-                    },
-                    {
-                        id: "Proposition 414 (Pima County)",
-                        title: "School Budget Override",
-                        jurisdiction: "Tucson Unified School District",
-                        result: "approved",
-                        resultText: "Approved 58.9%",
-                        pros: "Override budget limits to maintain programs; Prevents cuts; Maintains class sizes; Teacher retention",
-                        cons: "Tax increase; District inefficient; Need reform first",
-                        source: "Pima County Recorder"
-                    },
-                    {
-                        id: "Question 1 (Chandler)",
-                        title: "Parks & Recreation Bond",
-                        jurisdiction: "Chandler City",
-                        result: "approved",
-                        resultText: "Approved",
-                        pros: "Funds new parks and recreation facilities; Addresses growing city needs",
-                        cons: "Property tax impact; Expensive",
-                        source: "Maricopa County Recorder"
-                    },
-                    {
-                        id: "Question 2 (Chandler)",
-                        title: "Fire Department Facilities Bond",
-                        jurisdiction: "Chandler City",
-                        result: "approved",
-                        resultText: "Approved",
-                        pros: "New fire stations and equipment; Improves response times; Population growth",
-                        cons: "High cost; Tax increase",
-                        source: "Maricopa County Recorder"
-                    }
-                ]
-            },
-            colorado: {
-                name: "Colorado",
-                total: 3,
-                approved: 3,
-                rejected: 0,
-                measures: [
-                    {
-                        id: "Proposition LL (State)",
-                        title: "Retain Revenue for School Meals",
-                        jurisdiction: "Statewide",
-                        result: "approved",
-                        resultText: "Approved",
-                        pros: "Allows state to keep $12.4M in excess revenue; Funds Healthy School Meals for All program; No new taxes",
-                        cons: "Under TABOR must refund excess revenue to taxpayers",
-                        source: "Ballotpedia News"
-                    },
-                    {
-                        id: "Proposition MM (State)",
-                        title: "Reduce Tax Deductions for School Meals",
-                        jurisdiction: "Statewide",
-                        result: "approved",
-                        resultText: "Approved",
-                        pros: "Reduces deductions for $300K+ earners; Generates additional revenue for school meals and SNAP; Progressive tax approach",
-                        cons: "Tax increase on higher earners",
-                        source: "Ballotpedia News"
-                    },
-                    {
-                        id: "Measure 2A (Denver)",
-                        title: "Affordable Housing Sales Tax",
-                        jurisdiction: "Denver City",
-                        result: "approved",
-                        resultText: "Approved 63.5%",
-                        pros: "0.5% sales tax for affordable housing development; $70M annually; Addresses housing crisis; Mixed-income development",
-                        cons: "Regressive tax; Developers benefit; No guarantee of affordability",
-                        source: "Denver Elections Division"
                     }
                 ]
             },
             louisiana: {
                 name: "Louisiana",
                 total: 4,
-                approved: 4,
-                rejected: 0,
+                approved: 0,
+                rejected: 4,
                 measures: [
                     {
                         id: "Amendments 1-4",
-                        title: "Property Tax, Judicial, and Infrastructure Bonds",
-                        result: "approved",
-                        resultText: "All 4 Approved",
+                        title: "Property Tax, Judicial, and Infrastructure Package",
+                        jurisdiction: "Statewide",
+                        result: "rejected",
+                        resultText: "All 4 Rejected (34-36% support each)",
                         pros: "Tax relief for homeowners; Judicial reforms; Water infrastructure investment; Addresses aging systems",
-                        cons: "Reduces local government revenue; Increases state debt; Long-term obligations",
+                        cons: "Reduces local government revenue; Increases state debt; Long-term obligations; Each received only 34-36% support",
                         source: "Ballotpedia"
                     }
                 ]
@@ -1146,49 +1325,42 @@
             ohio: {
                 name: "Ohio",
                 total: 1,
-                approved: 0,
-                rejected: 1,
+                approved: 1,
+                rejected: 0,
                 measures: [
                     {
-                        id: "Issue 1",
-                        title: "Bail Reform",
-                        result: "rejected",
-                        resultText: "Rejected",
-                        pros: "Public safety measure; Bail reform provisions",
-                        cons: "Opposed by voters; Concerns about implementation",
-                        source: "Ballotpedia"
+                        id: "Issue 2",
+                        title: "Local Public Infrastructure Bond Amendment",
+                        jurisdiction: "Statewide",
+                        result: "approved",
+                        resultText: "Approved (May 6, 2025)",
+                        pros: "Constitutional amendment allowing local infrastructure bonds; Enables local governments to fund critical projects; Voter control over local bonds",
+                        cons: "Increases local debt capacity; May enable excessive borrowing",
+                        source: "Ballotpedia, Ohio Secretary of State"
                     }
                 ]
             },
             wisconsin: {
                 name: "Wisconsin",
-                total: 2,
-                approved: 0,
-                rejected: 2,
+                total: 1,
+                approved: 1,
+                rejected: 0,
                 measures: [
                     {
                         id: "Question 1",
-                        title: "Citizenship Voting Requirement",
-                        result: "rejected",
-                        resultText: "Rejected",
-                        pros: "Requires citizenship to vote; Prevents noncitizen voting",
-                        cons: "Unnecessary - already state and federal law; Purely symbolic",
-                        source: "Ballotpedia"
-                    },
-                    {
-                        id: "Question 2",
-                        title: "Legislative Veto Power",
-                        result: "rejected",
-                        resultText: "Rejected",
-                        pros: "Gives legislature veto power; Increases legislative authority",
-                        cons: "Disrupts balance of power; Executive overreach concerns",
+                        title: "Voter Photo ID Requirement",
+                        jurisdiction: "Statewide",
+                        result: "approved",
+                        resultText: "Approved (April 1, 2025)",
+                        pros: "Adds photo ID requirement to state constitution; Ensures election integrity; Aligns with existing practice",
+                        cons: "Unnecessary - already in law; May restrict access; Primarily symbolic measure",
                         source: "Ballotpedia"
                     }
                 ]
             }
         };
-        
-        // State positions for simplified map
+
+        // State positions for simplified map (2025 states)
         const statePositions = {
             california: { x: 120, y: 300, abbr: "CA" },
             texas: { x: 450, y: 420, abbr: "TX" },
@@ -1200,8 +1372,7 @@
             ohio: { x: 700, y: 250, abbr: "OH" },
             wisconsin: { x: 600, y: 180, abbr: "WI" },
             arizona: { x: 240, y: 380, abbr: "AZ" },
-            illinois: { x: 580, y: 260, abbr: "IL" },
-            florida: { x: 780, y: 480, abbr: "FL" }
+            illinois: { x: 580, y: 260, abbr: "IL" }
         };
         
         // Draw simplified US map
