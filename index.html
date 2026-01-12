@@ -1088,34 +1088,191 @@
 
     </script>
     <script>
-// 2026 State Voting Schedule - When ballot measure data becomes available
-// This table tracks when each state's 2026 props/measures info goes live
+// 2026 State Voting Schedule - Ballot measure signature deadlines
+// Source: Ballotpedia (https://ballotpedia.org/Ballot_measure_petition_deadlines_and_requirements,_2026)
 const stateVotingSchedule2026 = {
+    alaska: {
+        state: "Alaska",
+        signatureDeadline: "2026-01-20",
+        signaturesRequired: 34098,
+        source: "Ballotpedia",
+        notes: "Signatures must be submitted before start of legislative session"
+    },
+    arizona: {
+        state: "Arizona",
+        signatureDeadline: "2026-07-02",
+        signaturesRequired: { amendment: 383923, statute: 255949 },
+        source: "Ballotpedia",
+        notes: "Four months before general election"
+    },
+    arkansas: {
+        state: "Arkansas",
+        signatureDeadline: "2026-07-03",
+        signaturesRequired: { amendment: 90704, statute: 72563 },
+        source: "Ballotpedia",
+        notes: ""
+    },
     california: {
         state: "California",
-        dataAvailableStart: "2026-02-17", // Feb 17, 2026
-        dataAvailableEnd: "2026-03-09",   // Mar 9, 2026
-        source: "CA.gov",
-        notes: "Initiative filing deadline; measures certified after this period"
+        signatureDeadline: "2026-06-25",
+        signaturesRequired: { amendment: 874641, statute: 546651 },
+        source: "Ballotpedia, CA.gov",
+        notes: "Signatures verified 131 days before election; filing window Feb 17 - Mar 9"
     },
-    // Add other states as we collect data
-    // texas: {
-    //     state: "Texas",
-    //     dataAvailableStart: "TBD",
-    //     dataAvailableEnd: "TBD",
-    //     source: "",
-    //     notes: ""
-    // },
+    colorado: {
+        state: "Colorado",
+        signatureDeadline: "2026-08-03",
+        signaturesRequired: 124238,
+        source: "Ballotpedia",
+        notes: "Three months before election"
+    },
+    florida: {
+        state: "Florida",
+        signatureDeadline: "2026-02-01",
+        signaturesRequired: 880062,
+        source: "Ballotpedia",
+        notes: "Signatures must be verified on or before Feb 1"
+    },
+    idaho: {
+        state: "Idaho",
+        signatureDeadline: "2026-05-01",
+        signaturesRequired: 70725,
+        source: "Ballotpedia",
+        notes: "Statute only"
+    },
+    illinois: {
+        state: "Illinois",
+        signatureDeadline: "2026-05-03",
+        signaturesRequired: 328371,
+        source: "Ballotpedia",
+        notes: "Six months before election; amendment only"
+    },
+    maine: {
+        state: "Maine",
+        signatureDeadline: "2026-02-02",
+        signaturesRequired: 67682,
+        source: "Ballotpedia",
+        notes: "Indirect statute; 25 days after legislative session convenes"
+    },
+    massachusetts: {
+        state: "Massachusetts",
+        signatureDeadline: "2026-06-17",
+        signaturesRequired: { round1: 74574, round2: 12429 },
+        source: "Ballotpedia",
+        notes: "Indirect; Round 1 deadline passed (Nov 2025)"
+    },
+    michigan: {
+        state: "Michigan",
+        signatureDeadline: "2026-07-06",
+        signaturesRequired: { amendment: 446198, statute: 356958 },
+        source: "Ballotpedia",
+        notes: "Statute deadline is May 27, 2026"
+    },
+    missouri: {
+        state: "Missouri",
+        signatureDeadline: "2026-05-03",
+        signaturesRequired: { amendment: 170215, statute: 106384 },
+        source: "Ballotpedia",
+        notes: ""
+    },
+    montana: {
+        state: "Montana",
+        signatureDeadline: "2026-06-21",
+        signaturesRequired: { amendment: 60241, statute: 30121 },
+        source: "Ballotpedia",
+        notes: "Third Friday of June"
+    },
+    nebraska: {
+        state: "Nebraska",
+        signatureDeadline: "2026-07-02",
+        signaturesRequired: "10% registered voters (amendment); 7% (statute)",
+        source: "Ballotpedia",
+        notes: ""
+    },
+    nevada: {
+        state: "Nevada",
+        signatureDeadline: "2026-06-24",
+        signaturesRequired: 148788,
+        source: "Ballotpedia",
+        notes: "Amendment only; statute deadline passed (Nov 2024)"
+    },
+    northdakota: {
+        state: "North Dakota",
+        signatureDeadline: "2026-07-06",
+        signaturesRequired: { amendment: 31164, statute: 15582 },
+        source: "Ballotpedia",
+        notes: ""
+    },
+    ohio: {
+        state: "Ohio",
+        signatureDeadline: "2026-07-01",
+        signaturesRequired: { amendment: 413487, statute: 124046 },
+        source: "Ballotpedia",
+        notes: "Indirect statute has two rounds"
+    },
+    oklahoma: {
+        state: "Oklahoma",
+        signatureDeadline: "2026-08-25",
+        signaturesRequired: { amendment: 172993, statute: 92263 },
+        source: "Ballotpedia",
+        notes: "Verified 70 days before election"
+    },
+    oregon: {
+        state: "Oregon",
+        signatureDeadline: "2026-07-02",
+        signaturesRequired: { amendment: 156231, statute: 117173 },
+        source: "Ballotpedia",
+        notes: ""
+    },
+    southdakota: {
+        state: "South Dakota",
+        signatureDeadline: "2026-05-05",
+        signaturesRequired: { amendment: 35017, statute: 17508 },
+        source: "Ballotpedia",
+        notes: "First Tuesday in May"
+    },
+    utah: {
+        state: "Utah",
+        signatureDeadline: "2026-02-15",
+        signaturesRequired: 140748,
+        source: "Ballotpedia",
+        notes: "Indirect statute; two rounds"
+    },
+    washington: {
+        state: "Washington",
+        signatureDeadline: "2026-07-02",
+        signaturesRequired: 308911,
+        source: "Ballotpedia",
+        notes: "Indirect statute deadline passed (Jan 2026)"
+    },
+    wyoming: {
+        state: "Wyoming",
+        signatureDeadline: "2026-02-06",
+        signaturesRequired: 40669,
+        source: "Ballotpedia",
+        notes: "Before legislative session; indirect statute only"
+    }
+    // Note: Mississippi's initiative process is suspended due to court ruling
+    // Note: Texas does not have citizen initiative process
 };
 
-// Helper function to check if a state's 2026 data should be live
-function isStateDataLive(stateKey) {
+// Helper function to check if a state's signature deadline has passed
+function hasDeadlinePassed(stateKey) {
     const schedule = stateVotingSchedule2026[stateKey];
     if (!schedule) return false;
 
     const today = new Date();
-    const startDate = new Date(schedule.dataAvailableStart);
-    return today >= startDate;
+    const deadline = new Date(schedule.signatureDeadline);
+    return today >= deadline;
+}
+
+// Get upcoming deadlines sorted by date
+function getUpcomingDeadlines() {
+    const today = new Date();
+    return Object.entries(stateVotingSchedule2026)
+        .map(([key, data]) => ({ key, ...data }))
+        .filter(s => new Date(s.signatureDeadline) > today)
+        .sort((a, b) => new Date(a.signatureDeadline) - new Date(b.signatureDeadline));
 }
 
 // Ballot measures data - COMPREHENSIVE 2025 DATASET
