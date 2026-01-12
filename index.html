@@ -748,6 +748,23 @@
             margin: 0;
         }
 
+        .impact-category {
+            margin-bottom: 1rem;
+        }
+
+        .impact-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .impact-category-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-tertiary);
+            margin-bottom: 0.5rem;
+        }
+
         .impact-tags {
             display: flex;
             flex-wrap: wrap;
@@ -756,11 +773,21 @@
 
         .impact-tag {
             padding: 0.35rem 0.8rem;
-            background: var(--accent-light);
             border-radius: 999px;
             font-size: 0.75rem;
-            color: var(--accent);
-            border: 1px solid rgba(0, 175, 216, 0.2);
+            border: 1px solid;
+        }
+
+        .impact-tag.beneficiary {
+            background: #dcfce7;
+            color: #166534;
+            border-color: rgba(22, 101, 52, 0.2);
+        }
+
+        .impact-tag.funder {
+            background: #fef3c7;
+            color: #92400e;
+            border-color: rgba(146, 64, 14, 0.2);
         }
 
         /* ===== END Quick Summary Card Enhancements ===== */
@@ -1061,6 +1088,36 @@
 
     </script>
     <script>
+// 2026 State Voting Schedule - When ballot measure data becomes available
+// This table tracks when each state's 2026 props/measures info goes live
+const stateVotingSchedule2026 = {
+    california: {
+        state: "California",
+        dataAvailableStart: "2026-02-17", // Feb 17, 2026
+        dataAvailableEnd: "2026-03-09",   // Mar 9, 2026
+        source: "CA.gov",
+        notes: "Initiative filing deadline; measures certified after this period"
+    },
+    // Add other states as we collect data
+    // texas: {
+    //     state: "Texas",
+    //     dataAvailableStart: "TBD",
+    //     dataAvailableEnd: "TBD",
+    //     source: "",
+    //     notes: ""
+    // },
+};
+
+// Helper function to check if a state's 2026 data should be live
+function isStateDataLive(stateKey) {
+    const schedule = stateVotingSchedule2026[stateKey];
+    if (!schedule) return false;
+
+    const today = new Date();
+    const startDate = new Date(schedule.dataAvailableStart);
+    return today >= startDate;
+}
+
 // Ballot measures data - COMPREHENSIVE 2025 DATASET
         const ballotData = {
             texas: {
@@ -1271,7 +1328,10 @@
                         // NEW: Problem & Context
                         problem: "Federal cuts to Medicaid and SNAP programs threaten to close county hospitals and reduce healthcare access for 1.9 million residents.",
                         currentSituation: "Santa Clara County operates 4 public hospitals (Valley Medical Center, O'Connor, Regional Medical Center, St. Louise) that serve the uninsured and low-income residents. Without new revenue, at least one hospital would likely close.",
-                        whoIsImpacted: ["All county residents", "Uninsured patients", "Low-income families", "Medi-Cal recipients", "Hospital workers"],
+                        whoIsImpacted: {
+                            beneficiaries: ["Uninsured patients", "Low-income families", "Medi-Cal recipients", "Hospital workers"],
+                            funders: ["All county residents (via sales tax)"]
+                        },
                         benefits: "Healthcare access, Hospital operations, Safety net services",
                         isNewOrUpdate: "New 5-year temporary tax",
                         // NEW: Who's Behind It
@@ -1323,7 +1383,10 @@
                         // NEW: Problem & Context
                         problem: "Santa Cruz County faces a severe housing affordability crisis with rising homelessness. The median home price exceeds $1.1 million, and approximately 2,000 people experience homelessness on any given night.",
                         currentSituation: "Current funding for homeless services and affordable housing is insufficient. The county relies on limited federal grants and general fund allocations that have not kept pace with growing needs.",
-                        whoIsImpacted: ["Homeless residents", "Low-income renters", "Property owners", "Housing developers", "Social service providers"],
+                        whoIsImpacted: {
+                            beneficiaries: ["Homeless residents", "Low-income renters", "Social service providers"],
+                            funders: ["Property owners (parcel tax)", "Home buyers/sellers (transfer tax)"]
+                        },
                         benefits: "Housing, Homelessness services, Community stability",
                         isNewOrUpdate: "New initiative backed by housing advocates",
                         // NEW: Who's Behind It
@@ -1486,7 +1549,10 @@
                         // NEW: Problem & Context
                         problem: "Many SFUSD schools are aging, lack modern technology, and need seismic retrofitting and accessibility upgrades.",
                         currentSituation: "SFUSD operates 131 schools serving 49,000 students. Many buildings are 50+ years old with outdated HVAC, electrical systems, and technology infrastructure.",
-                        whoIsImpacted: ["SFUSD students", "Teachers and staff", "Property owners", "Parents and families"],
+                        whoIsImpacted: {
+                            beneficiaries: ["SFUSD students", "Teachers and staff", "Parents and families"],
+                            funders: ["Property owners"]
+                        },
                         benefits: "Schools, Student safety, Educational quality",
                         isNewOrUpdate: "New bond measure",
                         // NEW: Who's Behind It
@@ -1617,7 +1683,10 @@
                         // NEW: Problem & Context
                         problem: "The Upper Great Highway has been used for both vehicle traffic and recreation. During COVID, it was closed to cars and became a popular walking/cycling space. The city needed to decide its permanent future.",
                         currentSituation: "Since COVID, the highway has been closed on weekends and some weekdays. This measure makes the closure permanent 7 days a week.",
-                        whoIsImpacted: ["Sunset District residents", "Cyclists and pedestrians", "Beach-goers", "Commuters using the highway"],
+                        whoIsImpacted: {
+                            beneficiaries: ["Cyclists and pedestrians", "Beach-goers", "Sunset District residents"],
+                            funders: ["Existing city funds (no new taxes)"]
+                        },
                         benefits: "Recreation, Pedestrian safety, Environment, Quality of life",
                         isNewOrUpdate: "New permanent policy (was temporary pilot)",
                         // NEW: Who's Behind It
@@ -1914,7 +1983,10 @@
                         // NEW: Problem & Context
                         problem: "A 408-page independent investigation found Sheriff Christina Corpus engaged in misconduct including favoritism, retaliation, and misuse of county resources. Most of her leadership team resigned.",
                         currentSituation: "Under California law, elected sheriffs can typically only be removed through recall elections, which are costly and time-consuming. This measure provides an alternative path for removal for cause.",
-                        whoIsImpacted: ["Sheriff's department employees", "All county residents", "Crime victims", "County governance"],
+                        whoIsImpacted: {
+                            beneficiaries: ["Sheriff's department employees", "All county residents", "Crime victims"],
+                            funders: ["General county funds (no new taxes)"]
+                        },
                         benefits: "Government accountability, Public safety, Law enforcement integrity",
                         isNewOrUpdate: "New charter amendment (temporary until Dec 31, 2028)",
                         // NEW: Who's Behind It
@@ -2785,7 +2857,8 @@
             const initiatorType = measure.initiatedBy?.type || '';
             const initiatorClass = `initiator-${initiatorType.toLowerCase().replace(/\s+/g, '')}`;
             // Check for additional details (not including problem, which now shows above)
-            const hasMoreDetails = measure.currentSituation || measure.whoIsImpacted || measure.benefits || measure.isNewOrUpdate || measure.initiatedBy?.motivation;
+            const hasWhoIsImpacted = measure.whoIsImpacted && (measure.whoIsImpacted.beneficiaries?.length > 0 || measure.whoIsImpacted.funders?.length > 0);
+            const hasMoreDetails = measure.currentSituation || hasWhoIsImpacted || measure.benefits || measure.isNewOrUpdate || measure.initiatedBy?.motivation;
 
             // Build quick facts - only show if data exists
             const hasQuickFacts = measure.cost || measure.funding || measure.impactOnYou;
@@ -2830,12 +2903,25 @@
                                     <p>${measure.currentSituation}</p>
                                 </div>
                             ` : ''}
-                            ${measure.whoIsImpacted && measure.whoIsImpacted.length > 0 ? `
+                            ${measure.whoIsImpacted && (measure.whoIsImpacted.beneficiaries || measure.whoIsImpacted.funders) ? `
                                 <div class="detail-section">
                                     <h4>👥 Who Is Impacted</h4>
-                                    <div class="impact-tags">
-                                        ${measure.whoIsImpacted.map(g => `<span class="impact-tag">${g}</span>`).join('')}
-                                    </div>
+                                    ${measure.whoIsImpacted.beneficiaries && measure.whoIsImpacted.beneficiaries.length > 0 ? `
+                                        <div class="impact-category">
+                                            <div class="impact-category-label">Beneficiaries</div>
+                                            <div class="impact-tags">
+                                                ${measure.whoIsImpacted.beneficiaries.map(g => `<span class="impact-tag beneficiary">${g}</span>`).join('')}
+                                            </div>
+                                        </div>
+                                    ` : ''}
+                                    ${measure.whoIsImpacted.funders && measure.whoIsImpacted.funders.length > 0 ? `
+                                        <div class="impact-category">
+                                            <div class="impact-category-label">Funders</div>
+                                            <div class="impact-tags">
+                                                ${measure.whoIsImpacted.funders.map(g => `<span class="impact-tag funder">${g}</span>`).join('')}
+                                            </div>
+                                        </div>
+                                    ` : ''}
                                 </div>
                             ` : ''}
                             ${measure.benefits ? `
@@ -2967,7 +3053,7 @@
                         ${measure.summary || ''}
                         ${measure.problem || ''}
                         ${measure.currentSituation || ''}
-                        ${(measure.whoIsImpacted || []).join(' ')}
+                        ${(measure.whoIsImpacted?.beneficiaries || []).join(' ')} ${(measure.whoIsImpacted?.funders || []).join(' ')}
                         ${measure.initiatedBy?.name || ''}
                         ${(measure.endorsements?.support || []).map(e => e.name).join(' ')}
                         ${(measure.endorsements?.oppose || []).map(e => e.name).join(' ')}
