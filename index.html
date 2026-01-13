@@ -818,6 +818,109 @@
             font-size: 1.1rem;
         }
         
+        /* ===== DESKTOP OPTIMIZATION (1024px+) ===== */
+        @media (min-width: 1024px) {
+            .main-content {
+                max-width: 1400px;
+                padding: 4rem 3rem;
+            }
+
+            .stats-bar {
+                gap: 4rem;
+                padding: 2.5rem 4rem;
+            }
+
+            .stat-number {
+                font-size: 3rem;
+            }
+
+            .stat-label {
+                font-size: 0.85rem;
+            }
+
+            .map-container {
+                padding: 4rem;
+            }
+
+            .usa-map-wrapper {
+                max-width: 900px;
+            }
+
+            .map-title {
+                font-size: 1.75rem;
+            }
+
+            .state-dot {
+                width: 52px;
+                height: 52px;
+                font-size: 14px;
+            }
+
+            .details-panel {
+                padding: 3rem;
+            }
+
+            .state-name {
+                font-size: 2.5rem;
+            }
+
+            /* Two-column measure cards grid */
+            .measures-list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .measure-card {
+                margin-bottom: 0;
+            }
+
+            .measure-title {
+                font-size: 1.35rem;
+            }
+
+            .quick-facts {
+                gap: 1.5rem;
+            }
+
+            .fact-value {
+                font-size: 1rem;
+            }
+
+            .endorsements-grid {
+                gap: 2rem;
+            }
+
+            .search-container {
+                max-width: 700px;
+            }
+
+            .search-input {
+                font-size: 1.1rem;
+                padding: 1.25rem 3.5rem 1.25rem 2rem;
+            }
+        }
+
+        /* ===== LARGE DESKTOP (1400px+) ===== */
+        @media (min-width: 1400px) {
+            .main-content {
+                max-width: 1600px;
+            }
+
+            .usa-map-wrapper {
+                max-width: 1000px;
+            }
+
+            .stats-bar {
+                gap: 5rem;
+            }
+
+            .stat-number {
+                font-size: 3.5rem;
+            }
+        }
+
+        /* ===== MOBILE (768px and below) ===== */
         @media (max-width: 768px) {
             .arguments-section {
                 grid-template-columns: 1fr;
