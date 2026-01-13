@@ -3364,6 +3364,17 @@ function getUpcomingDeadlines() {
                         jurisdiction: "Statewide",
                         result: "approved",
                         resultText: "Approved 58%",
+                        summary: "Allows the WA Cares Fund (state long-term care program) to invest in stocks and equities for potentially higher returns.",
+                        problem: "The WA Cares Fund is limited to low-yield investments, reducing potential growth to fund future long-term care benefits.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Future long-term care recipients", "WA Cares Fund beneficiaries"],
+                            funders: ["Existing fund (investment strategy change)"]
+                        },
+                        initiatedBy: {
+                            name: "Washington Legislature",
+                            type: "Government",
+                            motivation: "Maximize returns on long-term care trust fund through diversified investments"
+                        },
                         pros: "Allows LTSS Trust Fund (WA Cares Fund) to invest in stocks/equities; Potential for higher returns; Strengthens long-term care program",
                         cons: "Similar measure defeated in 2020; Increased investment risk; Market volatility concerns",
                         source: "WA Secretary of State, Ballotpedia"
@@ -3461,7 +3472,27 @@ function getUpcomingDeadlines() {
                         title: "Voter Photo ID and Absentee Ballot Changes",
                         jurisdiction: "Statewide",
                         result: "rejected",
-                        resultText: "Rejected",
+                        resultText: "Rejected 52-48%",
+                        summary: "Would have required photo ID to vote in person and for absentee voting, and eliminated two days of early absentee voting.",
+                        problem: "Supporters claimed election integrity concerns; opponents said existing system is secure.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Election security advocates"],
+                            funders: ["N/A"]
+                        },
+                        initiatedBy: {
+                            name: "Citizen Initiative",
+                            type: "Grassroots",
+                            motivation: "Strengthen election security through voter ID requirements"
+                        },
+                        endorsements: {
+                            support: [
+                                { name: "Maine Republican Party", type: "Political Party" }
+                            ],
+                            oppose: [
+                                { name: "League of Women Voters", type: "Nonprofit" },
+                                { name: "ACLU of Maine", type: "Nonprofit" }
+                            ]
+                        },
                         pros: "Prevents voter fraud; Ensures election integrity; Requires photo ID for in-person and absentee voting",
                         cons: "Limits voting access; Eliminates two days of absentee voting; Ends automatic absentee ballots for seniors/disabled; First voter ID defeat in 10+ years; League of Women Voters opposed",
                         source: "State Court Report, Ballotpedia, CNN"
@@ -3471,7 +3502,28 @@ function getUpcomingDeadlines() {
                         title: "Extreme Risk Protection Order (Red Flag Law)",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 54%",
+                        summary: "Creates 'red flag' law allowing courts to temporarily remove firearms from people deemed a risk to themselves or others.",
+                        problem: "Maine had mass shooting in Lewiston; supporters sought additional tools to prevent gun violence.",
+                        whoIsImpacted: {
+                            beneficiaries: ["People at risk of self-harm", "Communities concerned about gun violence"],
+                            funders: ["Court system (administrative)"]
+                        },
+                        initiatedBy: {
+                            name: "Citizen Initiative",
+                            type: "Grassroots",
+                            motivation: "Prevent gun violence by allowing temporary firearm removal from at-risk individuals"
+                        },
+                        endorsements: {
+                            support: [
+                                { name: "Everytown for Gun Safety", type: "Nonprofit" },
+                                { name: "Maine Gun Safety Coalition", type: "Nonprofit" }
+                            ],
+                            oppose: [
+                                { name: "Governor Janet Mills", type: "Government" },
+                                { name: "Gun Owners of Maine", type: "Nonprofit" }
+                            ]
+                        },
                         pros: "Allows courts to temporarily restrict firearms access; Law enforcement and family can petition; Protects people at risk; Prevents tragedies",
                         cons: "Gov. Janet Mills opposed; Argued existing laws already allow firearm removal; Burdens family members to navigate court process",
                         source: "State Court Report, Ballotpedia"
@@ -3489,7 +3541,18 @@ function getUpcomingDeadlines() {
                         title: "Retain Revenue for School Meals Program",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 65%",
+                        summary: "Allows Colorado to retain $12.4 million in excess state revenue to continue funding the Healthy School Meals for All program instead of refunding it under TABOR.",
+                        problem: "Colorado's TABOR requires excess revenue be refunded; this would cut funding for the popular free school meals program.",
+                        whoIsImpacted: {
+                            beneficiaries: ["All public school students (free meals)", "Families"],
+                            funders: ["TABOR refund recipients (reduced refunds)"]
+                        },
+                        initiatedBy: {
+                            name: "Colorado Legislature",
+                            type: "Government",
+                            motivation: "Maintain funding for universal free school meals program"
+                        },
                         pros: "Allows state to keep $12.4M in excess revenue; Funds Healthy School Meals for All program; No new taxes; Maintains free meal program",
                         cons: "Under TABOR must refund excess revenue to taxpayers; Reduces refunds",
                         source: "Ballotpedia, NBC News"
@@ -3499,7 +3562,18 @@ function getUpcomingDeadlines() {
                         title: "Reduce Tax Deductions for School Meals Funding",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 58%",
+                        summary: "Reduces itemized tax deductions for taxpayers earning $300,000+ to generate revenue for school meals and SNAP programs.",
+                        problem: "School meals program needs additional funding; high earners have significant itemized deductions.",
+                        whoIsImpacted: {
+                            beneficiaries: ["School students", "SNAP recipients", "Low-income families"],
+                            funders: ["Taxpayers earning $300K+ (reduced deductions)"]
+                        },
+                        initiatedBy: {
+                            name: "Colorado Legislature",
+                            type: "Government",
+                            motivation: "Fund school nutrition programs through progressive tax changes"
+                        },
                         pros: "Reduces deductions for $300K+ earners; Generates additional revenue for school meals and SNAP; Progressive tax approach; Funds nutrition programs",
                         cons: "Tax increase on higher earners; Reduces itemized deductions",
                         source: "Ballotpedia, NBC News"
@@ -3517,7 +3591,18 @@ function getUpcomingDeadlines() {
                         title: "Mount Van Hoevenberg Winter Sports Development",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 67%",
+                        summary: "Authorizes a land swap allowing winter sports facility development on 323 acres of Adirondack forest preserve while adding 2,500+ acres of protected forest elsewhere.",
+                        problem: "The Lake Placid Olympic facilities at Mount Van Hoevenberg need expansion, but the Adirondack forest preserve is constitutionally protected.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Olympic athletes", "Winter sports enthusiasts", "Lake Placid economy"],
+                            funders: ["State budget (facility development)"]
+                        },
+                        initiatedBy: {
+                            name: "New York Legislature",
+                            type: "Government",
+                            motivation: "Modernize Olympic training facilities while preserving more forest land overall"
+                        },
                         pros: "Allows winter sports facility development on 323 acres; Preserves 2,500+ acres of forest; Supports Olympics infrastructure; Economic development",
                         cons: "Uses Adirondack forest preserve land; Environmental concerns; Development in protected area",
                         source: "Ballotpedia, State Court Report"
