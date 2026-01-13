@@ -1391,7 +1391,18 @@ function getUpcomingDeadlines() {
                         title: "Texas State Technical College Fund",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 75%",
+                        summary: "Creates permanent endowment fund of $850 million for Texas State Technical College System to expand campuses, upgrade equipment, and support workforce training.",
+                        problem: "Texas faces skilled worker shortages in manufacturing, technology, and trades. Technical colleges need stable funding for expansion.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Technical college students", "Employers seeking skilled workers", "Rural communities"],
+                            funders: ["State budget (one-time allocation)"]
+                        },
+                        initiatedBy: {
+                            name: "Texas Legislature",
+                            type: "Government",
+                            motivation: "Address workforce gaps and expand technical education across Texas"
+                        },
                         pros: "$850M for technical colleges and workforce education; Permanent funding; Builds facilities and programs; Supports skilled workforce development",
                         cons: "Locks spending outside regular budget oversight; Reduces legislative flexibility",
                         source: "Texas Tribune, KUT Radio"
@@ -1401,7 +1412,18 @@ function getUpcomingDeadlines() {
                         title: "Ban Capital Gains Tax",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 72%",
+                        summary: "Constitutionally prohibits the Texas Legislature from ever imposing a tax on capital gains (profits from selling investments).",
+                        problem: "Some states have considered capital gains taxes; this preemptively blocks any future attempt in Texas.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Investors", "Stock/property owners", "High-net-worth individuals"],
+                            funders: ["N/A (prevents future tax)"]
+                        },
+                        initiatedBy: {
+                            name: "Texas Legislature",
+                            type: "Government",
+                            motivation: "Permanently protect investors and attract business to Texas"
+                        },
                         pros: "Protects investors; Encourages economic growth; Prevents future tax on investments",
                         cons: "Preemptive measure against non-existent tax; Reduces future revenue options",
                         source: "Texas Tribune"
@@ -1411,7 +1433,27 @@ function getUpcomingDeadlines() {
                         title: "Bail Denial for Certain Crimes (Preventive Detention)",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 70%",
+                        summary: "Requires judges to deny bail for individuals accused of specific violent felonies if prosecutors prove the defendant is a flight risk or danger to the community.",
+                        problem: "Some defendants released on bail commit additional violent crimes. Prosecutors sought ability to detain dangerous suspects.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Crime victims", "Public safety"],
+                            funders: ["County jail systems (increased detention costs)"]
+                        },
+                        initiatedBy: {
+                            name: "Texas Legislature",
+                            type: "Government",
+                            motivation: "Keep dangerous offenders jailed while awaiting trial"
+                        },
+                        endorsements: {
+                            support: [
+                                { name: "Texas District & County Attorneys Association", type: "Professional Org" }
+                            ],
+                            oppose: [
+                                { name: "ACLU of Texas", type: "Nonprofit" },
+                                { name: "Texas Criminal Defense Lawyers", type: "Professional Org" }
+                            ]
+                        },
                         pros: "Keeps dangerous offenders jailed pretrial; Requires prosecutors to prove flight risk/danger; Includes right to attorney at hearing",
                         cons: "Violates presumption of innocence; Worsens jail overcrowding; Affects 40,000 cases annually; Disproportionate impact on poor defendants",
                         source: "ACLU of Texas, KUT Radio"
@@ -1421,7 +1463,18 @@ function getUpcomingDeadlines() {
                         title: "Texas Water Fund",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 78%",
+                        summary: "Dedicates first $1 billion annually from sales tax revenue (above $46.5B) to the State Water Fund for water infrastructure projects through 2047.",
+                        problem: "Texas faces severe drought conditions and aging water infrastructure. Growing population strains water supplies.",
+                        whoIsImpacted: {
+                            beneficiaries: ["All Texas residents", "Farmers", "Rural communities without water access"],
+                            funders: ["Sales tax revenue (redirected)"]
+                        },
+                        initiatedBy: {
+                            name: "Texas Water Development Board",
+                            type: "Government",
+                            motivation: "Fund critical water infrastructure to address drought and population growth"
+                        },
                         pros: "Dedicates $1B/year from sales tax to water infrastructure; Addresses drought concerns; Funds pipelines, reservoirs, rural access",
                         cons: "Reduces general revenue flexibility; Locks funding into single purpose",
                         source: "Texas Water Development Board"
@@ -1431,7 +1484,18 @@ function getUpcomingDeadlines() {
                         title: "Property Tax Exemption for Animal Feed",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 68%",
+                        summary: "Exempts livestock feed held as inventory by retailers from property taxes, reducing costs for agricultural suppliers.",
+                        problem: "Feed retailers pay property taxes on inventory, increasing costs passed on to farmers and ranchers.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Feed retailers", "Farmers and ranchers", "Rural economy"],
+                            funders: ["Local governments (reduced property tax revenue)"]
+                        },
+                        initiatedBy: {
+                            name: "Texas Farm Bureau",
+                            type: "Industry",
+                            motivation: "Reduce agricultural costs and support Texas farming/ranching"
+                        },
                         pros: "Helps farmers and ranchers; Reduces agricultural costs; Supports rural economy",
                         cons: "Reduces property tax revenue; Benefits specific industry",
                         source: "Texas Tribune"
@@ -1442,6 +1506,17 @@ function getUpcomingDeadlines() {
                         jurisdiction: "Statewide",
                         result: "approved",
                         resultText: "Approved 54.9%",
+                        summary: "Constitutionally prohibits the Legislature from creating new taxes on securities transactions (stock trades) or taxing securities industry workers.",
+                        problem: "Some states and the federal government have considered financial transaction taxes; this preemptively blocks them in Texas.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Stock traders", "Financial services workers", "Investment firms"],
+                            funders: ["N/A (prevents future tax)"]
+                        },
+                        initiatedBy: {
+                            name: "Texas Legislature",
+                            type: "Government",
+                            motivation: "Protect financial services industry and prevent future transaction taxes"
+                        },
                         pros: "Protects financial services industry; Encourages business growth; Prevents future taxes",
                         cons: "Preemptive restriction; Limits future revenue options; Favors financial sector",
                         source: "Texas Tribune"
@@ -1451,7 +1526,18 @@ function getUpcomingDeadlines() {
                         title: "Extend Property Tax Exemptions to Veterans' Surviving Spouses",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 85%",
+                        summary: "Extends homestead property tax exemptions to surviving spouses of veterans who died from injuries/conditions related to their military service.",
+                        problem: "Current law only covers spouses of veterans killed in action; spouses of those who died from service-related conditions get no exemption.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Surviving spouses of veterans", "Military families"],
+                            funders: ["Local governments (reduced property tax revenue)"]
+                        },
+                        initiatedBy: {
+                            name: "Texas Legislature",
+                            type: "Government",
+                            motivation: "Honor military families and expand veteran benefits"
+                        },
                         pros: "Supports military families; Extends benefits to surviving spouses of veterans who died from service-related conditions",
                         cons: "Reduces property tax revenue",
                         source: "Texas Tribune"
@@ -1461,7 +1547,18 @@ function getUpcomingDeadlines() {
                         title: "Ban Inheritance Taxes",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 76%",
+                        summary: "Constitutionally prohibits the Legislature from imposing or expanding any taxes on estates, inheritances, or gifts upon death.",
+                        problem: "While Texas has no inheritance tax, this amendment prevents any future legislature from creating one.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Heirs", "Wealthy families", "Family businesses"],
+                            funders: ["N/A (prevents future tax)"]
+                        },
+                        initiatedBy: {
+                            name: "Texas Legislature",
+                            type: "Government",
+                            motivation: "Permanently protect family wealth transfers from taxation"
+                        },
                         pros: "Protects estates; Ensures lawmakers cannot impose estate/inheritance taxes; Family financial security",
                         cons: "Texas already has no inheritance tax; Purely symbolic; Limits future options",
                         source: "Texas Tribune"
@@ -1471,7 +1568,18 @@ function getUpcomingDeadlines() {
                         title: "Exempt Business Equipment and Inventory from Property Taxes",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 67%",
+                        summary: "Allows Legislature to exempt up to $125,000 of business equipment, tools, and personal property used to generate income from property taxes.",
+                        problem: "Small businesses pay property taxes on equipment and inventory, increasing operating costs.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Small business owners", "Self-employed workers", "Tradespeople"],
+                            funders: ["Local governments (reduced property tax revenue)"]
+                        },
+                        initiatedBy: {
+                            name: "Texas Legislature",
+                            type: "Government",
+                            motivation: "Support small businesses by reducing tax burden on business equipment"
+                        },
                         pros: "Reduces business costs; Encourages economic growth; Supports small businesses",
                         cons: "Significant revenue loss; Shifts tax burden to homeowners",
                         source: "Texas Tribune"
@@ -1481,7 +1589,18 @@ function getUpcomingDeadlines() {
                         title: "Temporary Property Tax Exemption for Fire-Damaged Homes",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 82%",
+                        summary: "Provides temporary property tax exemption for homes destroyed or made uninhabitable by fire while owners are rebuilding.",
+                        problem: "Homeowners whose houses burn down still owe property taxes even when unable to live in the property.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Fire victims", "Homeowners rebuilding after disasters"],
+                            funders: ["Local governments (temporary revenue reduction)"]
+                        },
+                        initiatedBy: {
+                            name: "Texas Legislature",
+                            type: "Government",
+                            motivation: "Provide compassionate relief to disaster victims during rebuilding"
+                        },
                         pros: "Provides relief to disaster victims; Temporary exemption while rebuilding; Compassionate policy",
                         cons: "Reduces local revenue; Administrative complexity",
                         source: "Texas Tribune"
@@ -1491,7 +1610,18 @@ function getUpcomingDeadlines() {
                         title: "Increase Homestead Exemption + Senior/Disability Exemption",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 80%",
+                        summary: "Increases school district homestead exemption from $100,000 to $140,000 and adds $60,000 additional exemption for seniors and disabled homeowners.",
+                        problem: "Rising property values have increased tax burdens, especially for seniors and disabled residents on fixed incomes.",
+                        whoIsImpacted: {
+                            beneficiaries: ["All homeowners", "Seniors", "Disabled homeowners"],
+                            funders: ["School districts (state backfills some revenue)"]
+                        },
+                        initiatedBy: {
+                            name: "Texas Legislature",
+                            type: "Government",
+                            motivation: "Provide significant property tax relief to homeowners across Texas"
+                        },
                         pros: "Increases exemption from $100K to $140K for all homeowners; Extra $60K exemption for seniors/disabled; Significant tax relief",
                         cons: "Major revenue loss for schools and local governments; Shifts costs",
                         source: "Texas Tribune"
@@ -1501,7 +1631,18 @@ function getUpcomingDeadlines() {
                         title: "State Commission on Judicial Conduct Reform",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 65%",
+                        summary: "Overhauls the State Commission on Judicial Conduct, changing its membership structure and expanding its authority to discipline judges.",
+                        problem: "The current judicial oversight commission has been criticized as ineffective in holding judges accountable.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Litigants", "Justice system users", "Judicial accountability advocates"],
+                            funders: ["State budget (administrative)"]
+                        },
+                        initiatedBy: {
+                            name: "Texas Legislature",
+                            type: "Government",
+                            motivation: "Strengthen judicial accountability and oversight"
+                        },
                         pros: "Reforms membership and authority; Improves judicial oversight; Increases accountability",
                         cons: "Changes established oversight structure",
                         source: "Texas Tribune"
@@ -1511,7 +1652,18 @@ function getUpcomingDeadlines() {
                         title: "Raise Homestead Exemption to $140,000",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 79%",
+                        summary: "Raises the mandatory school district homestead exemption from $100,000 to $140,000 of assessed value.",
+                        problem: "Property taxes continue rising as home values increase, straining homeowner budgets.",
+                        whoIsImpacted: {
+                            beneficiaries: ["All Texas homeowners"],
+                            funders: ["School districts (state provides some backfill)"]
+                        },
+                        initiatedBy: {
+                            name: "Texas Legislature",
+                            type: "Government",
+                            motivation: "Reduce property tax burden on homeowners"
+                        },
                         pros: "Property tax relief for all homeowners; Increases from $100K to $140K; Reduces tax burden",
                         cons: "Reduces revenue for schools and local services",
                         source: "Texas Tribune"
@@ -1521,7 +1673,18 @@ function getUpcomingDeadlines() {
                         title: "Texas Dementia Prevention and Research Institute",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 68%",
+                        summary: "Creates the Dementia Prevention and Research Institute of Texas with $3 billion in bond funding for Alzheimer's, dementia, and Parkinson's research.",
+                        problem: "Dementia affects 400,000+ Texans with no cure. Texas lacks dedicated research funding for brain diseases.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Dementia patients", "Families of patients", "Medical researchers"],
+                            funders: ["State bond debt (taxpayers)"]
+                        },
+                        initiatedBy: {
+                            name: "Texas Legislature",
+                            type: "Government",
+                            motivation: "Fund research to find treatments and cures for dementia and related diseases"
+                        },
                         pros: "$3 billion investment for Alzheimer's research; Modeled after successful cancer research program; Addresses growing health crisis",
                         cons: "Massive debt; Competes with other health priorities; Long-term obligation",
                         source: "Texas Tribune"
@@ -1531,7 +1694,27 @@ function getUpcomingDeadlines() {
                         title: "Parental Rights Amendment",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 75%",
+                        summary: "Amends Texas Constitution to declare parents have fundamental right to direct upbringing, education, and care of their children.",
+                        problem: "Supporters claim parental rights need constitutional protection from government overreach.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Parents"],
+                            funders: ["N/A (declaratory)"]
+                        },
+                        initiatedBy: {
+                            name: "Texas Legislature",
+                            type: "Government",
+                            motivation: "Enshrine parental rights in state constitution"
+                        },
+                        endorsements: {
+                            support: [
+                                { name: "Texas Home School Coalition", type: "Nonprofit" }
+                            ],
+                            oppose: [
+                                { name: "Texas AFT", type: "Labor Union" },
+                                { name: "Child welfare advocates", type: "Nonprofit" }
+                            ]
+                        },
                         pros: "Affirms parents as primary decision makers for children; Protects parental authority; Codifies existing rights",
                         cons: "State law already guarantees these rights; Purely symbolic; Vague language could cause legal issues",
                         source: "Texas AFT, Texas Tribune"
@@ -1542,6 +1725,17 @@ function getUpcomingDeadlines() {
                         jurisdiction: "Statewide",
                         result: "approved",
                         resultText: "Approved 88.7%",
+                        summary: "Amends Texas Constitution to explicitly state 'only a citizen of the United States' may vote in elections, changing language from 'every person' who is a citizen.",
+                        problem: "Supporters claim the change prevents any future law allowing non-citizens to vote in any Texas election.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Voting integrity advocates"],
+                            funders: ["N/A (declaratory)"]
+                        },
+                        initiatedBy: {
+                            name: "Texas Legislature",
+                            type: "Government",
+                            motivation: "Strengthen constitutional language around citizenship voting requirement"
+                        },
                         pros: "Clarifies only US citizens can vote; Prevents future law changes allowing noncitizen voting",
                         cons: "Purely symbolic - current law already requires citizenship; Little evidence of noncitizen voting problem; Misleading framing",
                         source: "KUT Radio, Texas Standard"
@@ -1551,7 +1745,18 @@ function getUpcomingDeadlines() {
                         title: "Property Tax Exemption for Border Security Infrastructure",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 61%",
+                        summary: "Prevents property appraisers in border counties from increasing property values due to state-built border security infrastructure.",
+                        problem: "Border security infrastructure built by the state could artificially increase property values and tax bills for nearby landowners.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Border county property owners", "Landowners near border wall"],
+                            funders: ["Border county governments (reduced valuation)"]
+                        },
+                        initiatedBy: {
+                            name: "Texas Legislature",
+                            type: "Government",
+                            motivation: "Protect border residents from property value increases caused by state infrastructure"
+                        },
                         pros: "Prevents property values from increasing due to border security infrastructure; Protects border county residents",
                         cons: "Very specific exemption; May reduce local revenue",
                         source: "Texas Tribune"
@@ -1569,10 +1774,38 @@ function getUpcomingDeadlines() {
                         title: "Congressional Redistricting",
                         jurisdiction: "Statewide",
                         result: "approved",
-                        resultText: "Approved 70%",
+                        resultText: "Approved 64.4%",
+                        summary: "Temporarily replaces Citizens Redistricting Commission maps with legislature-drawn congressional districts for 2026-2030 elections, responding to Texas's mid-decade redistricting.",
+                        cost: "Minimal (administrative)",
+                        funding: "N/A",
+                        impactOnYou: "Changes your congressional district boundaries",
+                        problem: "Texas passed mid-decade redistricting that gave Republicans 5 additional seats, Democrats sought to offset this nationally.",
+                        currentSituation: "California's Citizens Redistricting Commission drew maps after 2020 census. This measure temporarily overrides them until 2031.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Democratic congressional candidates", "Competitive district voters"],
+                            funders: ["N/A (no direct cost)"]
+                        },
+                        initiatedBy: {
+                            name: "California State Legislature / Governor Newsom",
+                            type: "Government",
+                            motivation: "Counter Texas redistricting and help Democrats retain House control in 2026"
+                        },
+                        endorsements: {
+                            support: [
+                                { name: "Governor Gavin Newsom", type: "Government" },
+                                { name: "Vice President Kamala Harris", type: "Political" },
+                                { name: "California Teachers Association", type: "Labor Union" },
+                                { name: "House Majority PAC", type: "Political" }
+                            ],
+                            oppose: [
+                                { name: "Former Gov. Arnold Schwarzenegger", type: "Political" },
+                                { name: "Charles Munger Jr.", type: "Individual Donor" },
+                                { name: "California Republican Party", type: "Political Party" }
+                            ]
+                        },
                         pros: "Allows new legislature-drawn congressional map for 2026-2030; Could net Democrats 5 seats; Temporary measure expires 2030; Levels playing field vs Republican gerrymandering in other states",
-                        cons: "Undermines independent redistricting commission; Political power grab; Violates 2008/2010 reforms; Dangerous precedent",
-                        source: "CA Secretary of State, CalMatters, NPR"
+                        cons: "Undermines independent redistricting commission; Political power grab; Violates 2008/2010 reforms; Dangerous precedent; 4th most expensive ballot measure in CA history ($167M spent)",
+                        source: "CA Secretary of State, CalMatters, NPR, Ballotpedia"
                     },
                     {
                         id: "Measure A (Santa Clara County)",
