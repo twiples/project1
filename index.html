@@ -818,6 +818,40 @@
             font-size: 1.1rem;
         }
         
+        /* ===== TABLET (769px - 1023px) ===== */
+        @media (min-width: 769px) and (max-width: 1023px) {
+            .main-content {
+                max-width: 900px;
+                padding: 3rem 2rem;
+            }
+
+            .stats-bar {
+                gap: 3rem;
+                padding: 2rem 3rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .measures-list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .measure-card {
+                margin-bottom: 0;
+                padding: 1.5rem;
+            }
+
+            .state-dot {
+                width: 48px;
+                height: 48px;
+                font-size: 13px;
+            }
+        }
+
         /* ===== DESKTOP OPTIMIZATION (1024px+) ===== */
         @media (min-width: 1024px) {
             .main-content {
@@ -918,57 +952,371 @@
             .stat-number {
                 font-size: 3.5rem;
             }
+
+            /* Three-column grid for large desktops */
+            .measures-list {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* ===== EXTRA LARGE DESKTOP (1800px+) ===== */
+        @media (min-width: 1800px) {
+            .main-content {
+                max-width: 1800px;
+                padding: 5rem 4rem;
+            }
+
+            h1 {
+                font-size: 4.5rem;
+            }
+
+            .stat-number {
+                font-size: 4rem;
+            }
+
+            .map-container {
+                padding: 5rem;
+            }
+
+            .usa-map-wrapper {
+                max-width: 1200px;
+            }
+
+            .state-dot {
+                width: 60px;
+                height: 60px;
+                font-size: 16px;
+            }
         }
 
         /* ===== MOBILE (768px and below) ===== */
         @media (max-width: 768px) {
-            .arguments-section {
-                grid-template-columns: 1fr;
+            header {
+                padding: 3rem 1.5rem 2rem;
             }
 
-            .stats-bar {
-                gap: 1.5rem;
-            }
-
-            .stat-number {
+            h1 {
                 font-size: 2rem;
             }
 
+            .subtitle {
+                font-size: 0.95rem;
+            }
+
+            .search-container {
+                margin: 1.5rem auto 0;
+                padding: 0 1rem;
+            }
+
+            .search-input {
+                padding: 0.875rem 2.5rem 0.875rem 1rem;
+                font-size: 0.95rem;
+            }
+
+            .search-icon {
+                right: 1rem;
+                font-size: 1rem;
+            }
+
+            .main-content {
+                padding: 1.5rem 1rem;
+            }
+
+            .stats-bar {
+                gap: 1rem;
+                padding: 1.25rem 1rem;
+                border-radius: 12px;
+                margin-bottom: 1.5rem;
+            }
+
+            .stat {
+                padding: 0 0.75rem;
+            }
+
+            .stat-number {
+                font-size: 1.75rem;
+            }
+
+            .stat-label {
+                font-size: 0.65rem;
+            }
+
             .map-container {
-                padding: 1.5rem;
+                padding: 1.25rem;
+                border-radius: 16px;
+                margin-bottom: 1.5rem;
+            }
+
+            .map-title {
+                font-size: 1.1rem;
+                margin-bottom: 1rem;
+            }
+
+            .state-dot {
+                width: 36px;
+                height: 36px;
+                font-size: 10px;
             }
 
             #us-map {
                 height: 400px;
             }
 
-            /* Mobile: Quick Facts & Endorsements */
+            .details-panel {
+                padding: 1.5rem;
+                border-radius: 16px;
+                margin-top: 1rem;
+            }
+
+            .state-header {
+                flex-direction: column;
+                gap: 1rem;
+                margin-bottom: 1.5rem;
+                padding-bottom: 1rem;
+            }
+
+            .state-name {
+                font-size: 1.5rem;
+            }
+
+            .state-summary {
+                text-align: left;
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .summary-item {
+                font-size: 0.85rem;
+            }
+
+            .measure-card {
+                padding: 1.25rem;
+                border-radius: 12px;
+                margin-bottom: 1rem;
+            }
+
+            .measure-header {
+                gap: 0.5rem;
+            }
+
+            .measure-id {
+                font-size: 0.7rem;
+                padding: 0.25rem 0.5rem;
+            }
+
+            .measure-jurisdiction {
+                font-size: 0.7rem;
+            }
+
+            .measure-title {
+                font-size: 1.1rem;
+                margin: 0.5rem 0;
+            }
+
+            .result-badge {
+                font-size: 0.7rem;
+                padding: 0.3rem 0.6rem;
+            }
+
+            .measure-summary {
+                padding: 0.875rem;
+                font-size: 0.9rem;
+                margin: 0.75rem 0;
+            }
+
+            /* Mobile: Arguments Section */
+            .arguments-section {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            .argument-column h4 {
+                font-size: 0.8rem;
+            }
+
+            .argument-column li {
+                font-size: 0.85rem;
+                padding-left: 1rem;
+            }
+
+            /* Mobile: Quick Facts */
             .quick-facts {
                 grid-template-columns: 1fr 1fr;
-                gap: 0.8rem;
+                gap: 0.75rem;
                 padding: 1rem;
+                border-radius: 10px;
+            }
+
+            .fact-item {
+                padding: 0.5rem;
             }
 
             .fact-icon {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
 
             .fact-value {
+                font-size: 0.7rem;
+            }
+
+            .fact-label {
+                font-size: 0.6rem;
+            }
+
+            /* Mobile: Who Is Impacted */
+            .impact-section {
+                padding: 1rem;
+                border-radius: 10px;
+            }
+
+            .impact-category h5 {
                 font-size: 0.75rem;
             }
 
+            .impact-tag {
+                font-size: 0.7rem;
+                padding: 0.35rem 0.6rem;
+            }
+
+            /* Mobile: Endorsements */
             .endorsements-grid {
                 grid-template-columns: 1fr;
-                gap: 1rem;
+                gap: 0.75rem;
             }
 
+            .endorsement-column h4 {
+                font-size: 0.8rem;
+            }
+
+            .endorsement-chip {
+                font-size: 0.7rem;
+                padding: 0.4rem 0.6rem;
+            }
+
+            /* Mobile: Details Section */
             .details-grid {
                 grid-template-columns: 1fr;
+                gap: 0.75rem;
             }
 
-            .initiator-badge {
+            .detail-section {
+                padding: 0.875rem;
+            }
+
+            .detail-section h5 {
                 font-size: 0.75rem;
-                padding: 0.4rem 0.8rem;
+            }
+
+            .detail-section p {
+                font-size: 0.85rem;
+            }
+
+            /* Mobile: Initiator Badge */
+            .initiator-badge {
+                font-size: 0.7rem;
+                padding: 0.35rem 0.7rem;
+            }
+
+            /* Mobile: Expand Button */
+            .expand-details-btn {
+                font-size: 0.8rem;
+                padding: 0.6rem 1rem;
+            }
+
+            /* Mobile: Source links */
+            .measure-source {
+                font-size: 0.75rem;
+            }
+
+            /* Mobile: Close Button */
+            .close-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 1.25rem;
+            }
+
+            /* Mobile: Password Box */
+            .password-box {
+                padding: 2rem 1.5rem;
+                border-radius: 16px;
+            }
+
+            .password-title {
+                font-size: 1.5rem;
+            }
+
+            .password-subtitle {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ===== SMALL MOBILE (480px and below) ===== */
+        @media (max-width: 480px) {
+            header {
+                padding: 2rem 1rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.65rem;
+            }
+
+            .subtitle {
+                font-size: 0.85rem;
+            }
+
+            .main-content {
+                padding: 1rem 0.75rem;
+            }
+
+            .stats-bar {
+                padding: 1rem 0.75rem;
+            }
+
+            .stat {
+                padding: 0 0.5rem;
+            }
+
+            .stat-number {
+                font-size: 1.5rem;
+            }
+
+            .stat-label {
+                font-size: 0.6rem;
+            }
+
+            .map-container {
+                padding: 1rem;
+            }
+
+            .state-dot {
+                width: 32px;
+                height: 32px;
+                font-size: 9px;
+            }
+
+            .measure-card {
+                padding: 1rem;
+            }
+
+            .measure-title {
+                font-size: 1rem;
+            }
+
+            .quick-facts {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+
+            .fact-item {
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 0.75rem;
+            }
+
+            .search-input {
+                font-size: 0.9rem;
+                padding: 0.75rem 2.25rem 0.75rem 0.875rem;
             }
         }
 
@@ -1857,7 +2205,18 @@ function getUpcomingDeadlines() {
                         title: "Library Replacement Parcel Tax",
                         jurisdiction: "Truckee Library District",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 72%",
+                        summary: "Establishes $29 annual parcel tax for 30 years to fund construction of a new library facility to replace the aging current building.",
+                        problem: "The current Truckee Library building is outdated, undersized, and lacks modern amenities for the growing mountain community.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Truckee residents", "Library users", "Students and families"],
+                            funders: ["Property owners ($29/year per parcel)"]
+                        },
+                        initiatedBy: {
+                            name: "Truckee Library District",
+                            type: "Government",
+                            motivation: "Build a modern library facility to serve the growing Truckee community"
+                        },
                         pros: "$29 annual parcel tax for 30 years to replace aging library; Critical community resource; Updated facilities needed",
                         cons: "Long-term tax commitment; High total cost; Alternative funding options",
                         source: "Ballotpedia"
@@ -1912,7 +2271,18 @@ function getUpcomingDeadlines() {
                         title: "Sales Tax Renewal",
                         jurisdiction: "Delano City",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 68%",
+                        summary: "Renews existing 1% sales tax indefinitely to fund general city services including police, fire, roads, and parks.",
+                        problem: "The city's existing sales tax was set to expire; without renewal, services would face cuts.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Delano residents", "City service users"],
+                            funders: ["Shoppers in Delano (sales tax)"]
+                        },
+                        initiatedBy: {
+                            name: "City of Delano",
+                            type: "Government",
+                            motivation: "Maintain city services by making temporary sales tax permanent"
+                        },
                         pros: "Renews 1% sales tax indefinitely for city services; Maintains current services; No new tax",
                         cons: "Indefinite tax with no sunset; Reduces oversight; Combined rate reaches 8.25%",
                         source: "Ballotpedia"
@@ -1922,7 +2292,18 @@ function getUpcomingDeadlines() {
                         title: "Transactions and Use Tax Increase",
                         jurisdiction: "McFarland City",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 62%",
+                        summary: "Increases city sales tax by 1% to fund general services, bringing the combined rate to 9.25%.",
+                        problem: "Small city faces budget constraints and needs additional revenue for infrastructure and public safety.",
+                        whoIsImpacted: {
+                            beneficiaries: ["McFarland residents", "City employees"],
+                            funders: ["Shoppers in McFarland (sales tax)"]
+                        },
+                        initiatedBy: {
+                            name: "City of McFarland",
+                            type: "Government",
+                            motivation: "Generate revenue for city services and infrastructure improvements"
+                        },
                         pros: "1% increase for city services; Funds infrastructure and public safety",
                         cons: "High combined rate of 9.25%; Tax burden on residents; General purpose with limited accountability",
                         source: "Ballotpedia"
@@ -1932,7 +2313,18 @@ function getUpcomingDeadlines() {
                         title: "Residential Overlay Zoning for Commercial Sites",
                         jurisdiction: "Sausalito City",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 58%",
+                        summary: "Creates residential overlay zoning on 12 commercial sites to allow housing development while preserving commercial uses.",
+                        problem: "Sausalito faces severe housing shortage and must meet state-mandated housing production goals.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Future residents", "Housing seekers", "Property owners of designated sites"],
+                            funders: ["N/A (zoning change)"]
+                        },
+                        initiatedBy: {
+                            name: "City of Sausalito",
+                            type: "Government",
+                            motivation: "Meet state housing requirements while maintaining community character"
+                        },
                         pros: "Allows residential development on 12 commercial sites; Addresses housing shortage; Mixed-use development",
                         cons: "Reduces commercial space; May increase density; Traffic concerns",
                         source: "Ballotpedia"
@@ -1942,7 +2334,18 @@ function getUpcomingDeadlines() {
                         title: "MLK Property Residential Zoning",
                         jurisdiction: "Sausalito City",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 55%",
+                        summary: "Allows up to 50 housing units on the Martin Luther King Jr. School property site.",
+                        problem: "Former school site sits unused while city faces housing crisis and state housing mandates.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Future residents of housing development", "Housing seekers"],
+                            funders: ["N/A (zoning change)"]
+                        },
+                        initiatedBy: {
+                            name: "City of Sausalito",
+                            type: "Government",
+                            motivation: "Repurpose underutilized public property for housing to meet state requirements"
+                        },
                         pros: "Allows up to 50 housing units on Martin Luther King Jr. property; Addresses housing crisis; Community-centered development",
                         cons: "High density for area; Parking and infrastructure concerns",
                         source: "Ballotpedia"
@@ -1952,7 +2355,18 @@ function getUpcomingDeadlines() {
                         title: "Spending Limit Extension",
                         jurisdiction: "Grenada Fire Protection District",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 78%",
+                        summary: "Extends the district's $50,000 spending authority for four more years without requiring voter approval for each expenditure.",
+                        problem: "Rural fire district needs spending flexibility to respond to emergency equipment and operational needs.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Grenada area residents", "Fire district operations"],
+                            funders: ["Existing district revenues"]
+                        },
+                        initiatedBy: {
+                            name: "Grenada Fire Protection District",
+                            type: "Government",
+                            motivation: "Maintain operational flexibility for small rural fire district"
+                        },
                         pros: "Maintains $50,000 spending limit for four years; Allows continued operations; No tax increase",
                         cons: "Increases spending authority without voter approval for each expenditure",
                         source: "Ballotpedia"
@@ -1962,7 +2376,18 @@ function getUpcomingDeadlines() {
                         title: "Sales Tax for City Services",
                         jurisdiction: "Dunsmuir City",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 65%",
+                        summary: "Establishes 1% sales tax to fund city services, facilities maintenance, and infrastructure in this small mountain town.",
+                        problem: "Small city on I-5 corridor lacks revenue to maintain aging infrastructure and provide services.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Dunsmuir residents", "Local businesses"],
+                            funders: ["Shoppers and visitors (sales tax)"]
+                        },
+                        initiatedBy: {
+                            name: "City of Dunsmuir",
+                            type: "Government",
+                            motivation: "Generate revenue to maintain services in small mountain community"
+                        },
                         pros: "1% sales tax for city services and facilities; Maintains infrastructure; Funds public safety",
                         cons: "Tax burden on residents and visitors; General fund with limited accountability",
                         source: "Ballotpedia"
@@ -1972,7 +2397,18 @@ function getUpcomingDeadlines() {
                         title: "Sales Tax for County Services",
                         jurisdiction: "Santa Fe Springs City",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 71%",
+                        summary: "Adds 0.25% sales tax to fund city services including public safety, street maintenance, and community programs.",
+                        problem: "City needs additional revenue to maintain service levels amid rising costs.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Santa Fe Springs residents", "City service users"],
+                            funders: ["Shoppers (sales tax)"]
+                        },
+                        initiatedBy: {
+                            name: "City of Santa Fe Springs",
+                            type: "Government",
+                            motivation: "Maintain city services and infrastructure with modest tax increase"
+                        },
                         pros: "$0.0025 sales tax increase for county services; Maintains service levels; Modest increase",
                         cons: "Adds to high LA County tax burden; Lack of specific service guarantees",
                         source: "Ballotpedia"
@@ -1982,7 +2418,18 @@ function getUpcomingDeadlines() {
                         title: "Healthcare Parcel Tax",
                         jurisdiction: "Washington Township Health Care District",
                         result: "approved",
-                        resultText: "Approved",
+                        resultText: "Approved 67%",
+                        summary: "Establishes $0.05 per square foot parcel tax for 12 years to fund healthcare services at Washington Hospital.",
+                        problem: "Local hospital district needs stable funding to maintain healthcare services for Fremont/Newark/Union City area.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Hospital patients", "Local healthcare workers", "Tri-City residents"],
+                            funders: ["Property owners ($0.05/sq ft)"]
+                        },
+                        initiatedBy: {
+                            name: "Washington Township Health Care District",
+                            type: "Government",
+                            motivation: "Provide stable funding for local hospital and healthcare services"
+                        },
                         pros: "$0.05/sq ft parcel tax for 12 years; Funds health care services; Supports local hospital",
                         cons: "Property tax increase; Long-term commitment; Should seek other revenue",
                         source: "Ballotpedia"
@@ -1992,7 +2439,18 @@ function getUpcomingDeadlines() {
                         title: "Road Improvements Parcel Tax",
                         jurisdiction: "Fernwood-Cothrin Ranch Zone",
                         result: "rejected",
-                        resultText: "Rejected",
+                        resultText: "Rejected 58%",
+                        summary: "Would have established $450 annual parcel tax to fund road improvements in this small rural area.",
+                        problem: "Private roads in rural subdivision need maintenance and improvement beyond what residents can fund individually.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Subdivision residents"],
+                            funders: ["Property owners ($450/year rejected)"]
+                        },
+                        initiatedBy: {
+                            name: "Fernwood-Cothrin Ranch Zone of Benefit",
+                            type: "Government",
+                            motivation: "Fund road improvements in rural subdivision"
+                        },
                         pros: "$450 annual parcel tax for road improvements; Addresses infrastructure needs",
                         cons: "High cost for small benefit area; Property owners rejected; Alternative funding needed",
                         source: "Ballotpedia"
@@ -2002,7 +2460,18 @@ function getUpcomingDeadlines() {
                         title: "Road Maintenance Parcel Tax",
                         jurisdiction: "Walnut Drive Zone",
                         result: "rejected",
-                        resultText: "Rejected",
+                        resultText: "Rejected 62%",
+                        summary: "Would have established $685 annual parcel tax for road maintenance in this rural zone of benefit.",
+                        problem: "Private roads in rural area need ongoing maintenance funding beyond current resources.",
+                        whoIsImpacted: {
+                            beneficiaries: ["Zone residents"],
+                            funders: ["Property owners ($685/year rejected)"]
+                        },
+                        initiatedBy: {
+                            name: "Walnut Drive Zone of Benefit",
+                            type: "Government",
+                            motivation: "Establish stable funding for road maintenance"
+                        },
                         pros: "$685 annual parcel tax for road maintenance; Improves infrastructure",
                         cons: "Very high annual cost; Rejected by property owners; Unsustainable",
                         source: "Ballotpedia"
@@ -2012,7 +2481,18 @@ function getUpcomingDeadlines() {
                         title: "School Parcel Tax",
                         jurisdiction: "Petaluma Joint Union High School District",
                         result: "rejected",
-                        resultText: "Rejected",
+                        resultText: "Rejected (below 2/3)",
+                        summary: "Would have established $129 annual parcel tax for eight years to maintain educational programs and prevent teacher layoffs.",
+                        problem: "School district faces budget shortfalls that threaten programs and staffing levels.",
+                        whoIsImpacted: {
+                            beneficiaries: ["High school students", "Teachers"],
+                            funders: ["Property owners ($129/year rejected)"]
+                        },
+                        initiatedBy: {
+                            name: "Petaluma Joint Union High School District",
+                            type: "Government",
+                            motivation: "Maintain educational programs and prevent cuts"
+                        },
                         pros: "$129 annual parcel tax for eight years; Maintains educational programs; Prevents cuts",
                         cons: "Tax fatigue; District should cut costs first; Didn't reach supermajority",
                         source: "Ballotpedia"
@@ -2022,7 +2502,18 @@ function getUpcomingDeadlines() {
                         title: "Sales Tax Increase",
                         jurisdiction: "Redding City",
                         result: "rejected",
-                        resultText: "Rejected",
+                        resultText: "Rejected 56%",
+                        summary: "Would have increased city sales tax by 1% for general city services, bringing combined rate to 8.25%.",
+                        problem: "City faces budget deficits and infrastructure needs but voters opposed additional taxes.",
+                        whoIsImpacted: {
+                            beneficiaries: ["City services"],
+                            funders: ["Shoppers (rejected)"]
+                        },
+                        initiatedBy: {
+                            name: "City of Redding",
+                            type: "Government",
+                            motivation: "Generate revenue for city services and infrastructure"
+                        },
                         pros: "1% sales tax increase for city services; Combined rate 8.25%; Funds infrastructure",
                         cons: "Tax burden; City should reduce spending; Economic impact on businesses",
                         source: "Ballotpedia"
